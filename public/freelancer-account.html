@@ -2,7 +2,7 @@
 	<html lang="en-us">
 	<head>
 
-	    <title>Gigity</title>
+	    <title>Your Account</title>
 	    <!-- Materialize stylesheets -->
 	    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
 	    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -36,11 +36,42 @@
 	      </ul>
 	    </div>
 	  </nav>
+	  <br>
 
-	  <!-- Header -->
+    <!-- display the freelancers profile information -->
 
-	 <a class="waves-effect waves-light btn-large">Sign Up</a>
-	 <a class="waves-effect waves-light btn-large">My Account</a>
+<div class="row center-align">
+
+	<div class="profile col s12">
+		<img id="profile-img" src="https://static.pexels.com/photos/769746/pexels-photo-769746.jpeg">
+	</div>
+	<div class="profile col s12">
+		<span class="card-title">John Doe</span>
+        <p id="card-occupation">Data Scientist</p>
+        <p id="card-rate">$80 per Hour</p>
+        <p id="email">jdoe@gmail.com</p>
+    </div>
+</div>
+
+	<!-- displays the reviews from other employees -->
+<div class="row center-align">
+	
+	<div class="col s12">
+	 <div class="card blue-grey darken-1">
+        <div class="card-content white-text">
+            <span cid="employer">Employer Review</span>
+            <p id="rating">5</p>
+            <p id="review">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit.</p>
+        </div>
+      </div>
+    </div>
+
+</div>
+
+
+
+
+
 
 
 	<!-- scripts -->
@@ -50,6 +81,6 @@
     <script src="assets/js/javascript.js"></script>
 
 
-
 </body>
+
 </html>
