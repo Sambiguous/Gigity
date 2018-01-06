@@ -1,6 +1,8 @@
 var express = require("express");
+var fs = require('fs');
 
 var router = express.Router();
+var PATH = '../public/'
 
 // Import the model (freelancers.js) to use its database functions.
 var employers = require("../models/employers.js");
@@ -8,7 +10,7 @@ var employers = require("../models/employers.js");
 //Create all our routes and set up logic within those routes where required.
 router.get("/", function(req, res) {
 
-    //res.send("../public/index.js")
+    //res.send(PATH + employer-review.html)
     res.send("this is the employer page")
 
 });

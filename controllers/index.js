@@ -1,12 +1,14 @@
-var fs = require('fs');
 var express = require("express");
+var fs = require('fs');
+
 var router = express.Router();
+var PATH = '../public/'
 
 
 // Create all our routes and set up logic within those routes where required.
 router.get("/", function(req, res) {
-    console.log("hit home route")
-    fs.readFile("./public/home.html","utf-8", function(err, data){
+
+    fs.readFile(PATH + 'home.html', 'utf-8', function(err, data){
         if(err) throw err;
         res.send(data)
     })
