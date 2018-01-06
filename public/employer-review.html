@@ -2,7 +2,7 @@
 	<html lang="en-us">
 	<head>
 
-	    <title>Gigity</title>
+	    <title>Review Freelancer</title>
 	    <!-- Materialize stylesheets -->
 	    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
 	    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -37,10 +37,37 @@
 	    </div>
 	  </nav>
 
-	  <!-- Header -->
+		<!-- Freelancer Form -->
 
-	 <a class="waves-effect waves-light btn-large">Sign Up</a>
-	 <a class="waves-effect waves-light btn-large">My Account</a>
+<div class="row">
+    <form class="col s12">
+
+    	<h2>Review a Freelancer</h2>
+
+	    <div class="input-field col s10">
+          <input id="name" type="text" class="validate">
+          <label for="name">Who are you reviewing?</label>
+        </div>
+
+       	 <div class="input-field col s2" id="rating">
+    		<select>
+      		  <option value="" disabled selected>Rating</option>
+		      <option value="1">1</option>
+		      <option value="2">2</option>
+		      <option value="3">3</option>
+		      <option value="4">4</option>
+		      <option value="5">5</option>
+		    </select>
+        </div>
+
+        <div class="input-field col s12">
+           <textarea id="review" class="materialize-textarea"></textarea>
+           <label for="review">Write a Review</label>
+        </div>
+
+	</form>
+</div>
+
 
 
 	<!-- scripts -->
@@ -50,6 +77,6 @@
     <script src="assets/js/javascript.js"></script>
 
 
-
 </body>
+
 </html>
