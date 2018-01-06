@@ -1,19 +1,27 @@
-li {
-  padding: 5px;
-  margin: 5px;
-  background: #faebd7;
+body {
+	margin: auto;
 }
 
-.label {
-  font-weight: bold;
+h1 {
+	font-size: 40px;
 }
 
-.create-update-form {
-  padding: 5px;
-  margin: 5px;
-  background: aqua;
+h2 {
+	font-size: 30px;
 }
 
-.form-group {
-  margin-bottom: 5px;
+.nav-wrapper {
+ background-color: #C0C1C5;
+}
+
+
+.btn-large {
+	width: 45%;
+	margin: 20px;
+	background-color: #C0C1C5;
+	font-family: 'Encode Sans Expanded', sans-serif;
+}
+
+.btn-large:hover {
+		background-color: #3A3A3A;
 }
