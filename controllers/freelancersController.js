@@ -3,10 +3,12 @@ var express = require("express");
 var router = express.Router();
 
 // Import the model (freelancers.js) to use its database functions.
-var cat = require("../models/freelancers.js");
+var freelancers = require("../models/freelancers.js");
 
 // Create all our routes and set up logic within those routes where required.
 router.get("/", function(req, res) {
+
+    res.send("../public/index.js")
 
 });
 
