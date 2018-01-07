@@ -1,0 +1,56 @@
+html { 
+  background: url(images/pexels-photo-396158.jpeg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+
+body {
+	margin: auto;
+}
+
+h1 {
+	font-size: 40px;
+}
+
+h2 {
+	font-size: 30px;
+}
+
+
+#profile-img {
+	width: 40%;
+	align-items: center;
+}
+
+.nav-wrapper {
+ background-color: white;
+}
+
+.brand-logo {
+	width: 110px;
+}
+
+
+.btn-large {
+	width: 90%;
+	margin: 10px;
+	/*position:absolute;*/
+	/*margin-bottom: bottom:280px;*/
+	background-color: white;
+	opacity: .7;
+	font-family: 'Encode Sans Expanded', sans-serif;
+	color: #282734;
+	font-weight: bold;
+}
+
+.btn-large:hover {
+		background-color: white;
+		opacity: 1;
+}
+
+.card {
+	width: 50%;
+}
