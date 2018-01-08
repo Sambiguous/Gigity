@@ -17,6 +17,25 @@ $(".button-collapse").sideNav();
       startingTop: '4%', // Starting top style attribute
       endingTop: '10%', // Ending top style attribute
       // Callback for Modal close
-    }
-  );
+    });
+
+    $('#login').on("click", function(event){
+      event.preventDefault();
+      $.post({
+        url: "/login",
+        data: {
+          email: $("#email").val(),
+          pass: $("#password").val()
+        }
+      }).done(function(response){
+        if(response === "login success"){
+          //successfull login code goes here
+        } else{
+          //failed login code goes here
+        }
+      })
+    })
+
+
+
   });
