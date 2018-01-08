@@ -2,7 +2,7 @@
 	<html lang="en-us">
 	<head>
 
-	    <title>Gigity</title>
+	    <title>Find a Freelancer</title>
 	    <!-- Materialize stylesheets -->
 	    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
 	    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -37,17 +37,59 @@
 	    </div>
 	  </nav>
 
-	  <!-- Header -->
+		<!-- Freelancer Form -->
 
-	  <h1>I am a</h1>
+		<h2>Find a Freelancer</h2>
+		<h3>What are you looking for?</h3>
+
+	<form action="#">
+    <span>
+      <input type="checkbox" class="checkbox" id="frontend" />
+      <label for="frontend">Front End Developer</label>
+   
+   
+      <input type="checkbox" class="checkbox" id="backend" />
+      <label for="backend">Front End Developer</label>
+    
+    
+      <input type="checkbox" class="checkbox" id="scientist" />
+      <label for="scientist">Data Scientist</label>
+   
+      <input type="checkbox" class="checkbox" id="it" />
+      <label for="it">IT</label>
+	</span>
+ 	</form>
 
 
-	 <a class="dropdown-button btn waves-effect waves-light btn-large">Freelancer</a>
-	 	<ul id='dropdown1' class='dropdown-content'>
-	 	<li><a href="#!">one</a></li>
-    	<li><a href="#!">two</a></li>
-    	</ul>
-	 <a class="waves-effect waves-light btn-large">Employer</a>
+    <!-- dynamic cards to display the freelancers information -->
+
+<div class="row center-align">
+            <div class="col s6 m4 l4">
+                <div class="card profile-card">
+                    <div class="card-image">
+                        <img id="card-img" src="https://static.pexels.com/photos/769746/pexels-photo-769746.jpeg">
+                        <span class="card-title"></span>
+
+						<!-- this needs to go to the employer mail form -->
+
+                        <a class="btn-floating halfway-fab waves-effect waves-light">
+          <i class="material-icons">email</i></a>
+                    </div>
+                    <div class="card-content">
+                    	<span class="card-title">John Doe</span>
+                        <p id="card-occupation">Data Scientist</p>
+                        <p id="card-rate">$80 per Hour</p>
+                        <br>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+	</form>
+</div>
+
 
 
 	<!-- scripts -->
@@ -57,6 +99,6 @@
     <script src="assets/js/javascript.js"></script>
 
 
-
 </body>
+
 </html>

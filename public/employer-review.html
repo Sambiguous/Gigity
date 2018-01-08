@@ -2,7 +2,7 @@
 	<html lang="en-us">
 	<head>
 
-	    <title>Freelancer Sign Up</title>
+	    <title>Review Freelancer</title>
 	    <!-- Materialize stylesheets -->
 	    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
 	    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -42,60 +42,28 @@
 <div class="row">
     <form class="col s12">
 
-    	<h2>Freelancer Signup</h2>
+    	<h2>Review a Freelancer</h2>
 
-	    <div class="input-field col s6">
-          <input id="first_name" type="text" class="validate">
-          <label for="first_name">First Name</label>
+	    <div class="input-field col s10">
+          <input id="name" type="text" class="validate">
+          <label for="name">Who are you reviewing?</label>
         </div>
 
-        <div class="input-field col s6">
-          <input id="last_name" type="text" class="validate">
-          <label for="last_name">Last Name</label>
+       	 <div class="input-field col s2" id="rating">
+    		<select>
+      		  <option value="" disabled selected>Rating</option>
+		      <option value="1">1</option>
+		      <option value="2">2</option>
+		      <option value="3">3</option>
+		      <option value="4">4</option>
+		      <option value="5">5</option>
+		    </select>
         </div>
-
-
-
-        <div class="input-field col s6">
-          <input id="email" type="text" class="validate">
-          <label for="email">Email</label>
-        </div>
-
-        <div class="input-field col s6">
-          <input id="phone" type="text" class="validate">
-          <label for="phone">Phone</label>
-        </div>
-
-
-        <div class="input-field col s6">
-          <input id="photo" type="text" class="validate">
-          <label for="photo">Photo Link</label>
-        </div>
-
-        <div class="input-field col s6">
-          <input id="rate" type="text" class="validate">
-          <label for="rate">Rate</label>
-        </div>
-
-
 
         <div class="input-field col s12">
-
- 				<input type="checkbox" class="filled-in" id="filled-in-box" checked="checked" />
-      			<label for="front">Front End Developer</label>
-    			
- 				<input type="checkbox" class="filled-in" id="filled-in-box" checked="checked" />
-      			<label for="back">Back End Developer</label>
-    		
- 				<input type="checkbox" class="filled-in" id="filled-in-box" checked="checked" />
-      			<label for="data">Data Scientist</label>
-    			
- 				<input type="checkbox" class="filled-in" id="filled-in-box" checked="checked" />
-      			<label for="it">IT</label>
-    		
-	  	</div>
-
-
+           <textarea id="review" class="materialize-textarea"></textarea>
+           <label for="review">Write a Review</label>
+        </div>
 
 	</form>
 </div>

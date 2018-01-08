@@ -23,9 +23,11 @@ app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
 // Import routes and give the server access to them.
-var routes = require("./controllers/catsController.js");
+var routes = require("./controllers/index.js");
 
-app.use("/", routes);
+//console.log(routes)
+
+app.use(routes);
 
 app.listen(PORT, function(){
     console.log("app listening on port", PORT)
