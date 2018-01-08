@@ -2,7 +2,7 @@ var express = require("express");
 var fs = require('fs');
 
 var router = express.Router();
-var PATH = '../public/'
+var PATH = './public/'
 
 // Import the model (freelancers.js) to use its database functions.
 var employers = require("../models/employers.js");
