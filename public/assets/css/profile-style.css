@@ -1,0 +1,121 @@
+body {
+	/*margin: auto;*/
+}
+
+h1 {
+	font-size: 40px;
+}
+
+h2 {
+	font-family: 'Fjalla One', sans-serif;
+	color: white;
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 50px;
+	margin-top: 150px;
+	text-shadow: 1px 1px 8px #696969;
+}
+
+h3 {
+	font-size: 25px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+.parallax-container {
+	max-height: 350px;
+}
+
+.card-title{
+	margin-top: 0px;
+}
+
+#contact-modal {
+	margin-top: 0px;
+}
+
+.profile-card {
+	margin-top: 20px;
+}
+
+.container {
+	display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
+.card {
+	border-radius: 10px;
+	text-align: center;
+	font-family: 'Encode Sans Expanded', sans-serif;
+}
+
+.review-card {
+	margin-top: -10px;
+	font-family: 'Encode Sans Expanded', sans-serif;
+	color: grey;
+	text-align: left;
+}
+
+.nav-wrapper {
+ background-color: white;
+}
+
+.brand-logo {
+	width: 110px;
+}
+
+#big-logo {
+	width: 100%;
+}
+
+.button-collapse {
+	color: grey;
+}
+
+#browse {
+	color: grey;
+}
+
+#buttons {
+	margin-top: 10px;
+	width: 80%;
+	margin-bottom: 0px;
+}
+
+.btn-large {
+	width: 90%;
+	margin: 10px;
+	background-color: white;
+	opacity: .6;
+	font-family: 'Encode Sans Expanded', sans-serif;
+	color: #282734;
+	font-weight: bold;
+}
+
+.btn-large:hover {
+		background-color: white;
+		opacity: 1;
+}
+
+#employer {
+	font-size: 20px;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+@media screen and (max-width: 599px) {
+
+#buttons {
+	margin-top: 20px;
+	width: 100%;
+	margin-bottom: 0px;
+}
+
+.btn-large {
+    	display: block;
+    	margin: 0 auto;
+    	margin-bottom: 10px;
+    	width: 100%;
+    }
+}

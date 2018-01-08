@@ -1,5 +1,5 @@
 html { 
-  background: url(images/pexels-photo-396158.jpeg) no-repeat center center fixed; 
+  background: url(images/pexels-photo-3961582.jpeg) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -33,12 +33,22 @@ h2 {
 	width: 110px;
 }
 
+#big-logo {
+	width: 100%;
+}
+
+.button-collapse {
+	color: grey;
+}
+
+#browse {
+	color: grey;
+}
 
 .btn-large {
-	width: 90%;
-	margin: 10px;
-	/*position:absolute;*/
-	/*margin-bottom: bottom:280px;*/
+	width: 100%;
+	margin: 5px;
+	margin-bottom: 10px;
 	background-color: white;
 	opacity: .7;
 	font-family: 'Encode Sans Expanded', sans-serif;
@@ -54,3 +64,35 @@ h2 {
 .card {
 	width: 50%;
 }
+
+
+@media screen and (max-width: 1800px) {
+    #big-logo {
+    	margin-top: 110%;
+    }
+    .btn-large {
+    	display: block;
+    	margin: 0 auto;
+    	margin-bottom: 10px;
+    }
+}
+
+
+@media screen and (max-width: 599px) {
+    #big-logo {
+    	display: block;
+    	margin: 0 auto;
+    	width: 80%;
+    }
+    .home-buttons {
+		margin-top: 20%;
+    }
+
+    .btn-large {
+    	display: block;
+    	margin: 0 auto;
+    	margin-bottom: 10px;
+    	width: 80%;
+    }
+}
+

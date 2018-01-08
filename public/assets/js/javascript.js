@@ -1,5 +1,6 @@
   $(document).ready(function() {
     $('select').material_select();
+    $('.parallax').parallax();
   });
 
 $(".button-collapse").sideNav();
@@ -7,6 +8,7 @@ $(".button-collapse").sideNav();
 
  $('.dropdown-button').dropdown('open');
  $('.dropdown-button').dropdown('close');
+
 
  $(document).ready(function(){
   	$('.modal').modal({
@@ -16,7 +18,21 @@ $(".button-collapse").sideNav();
       outDuration: 200, // Transition out duration
       startingTop: '4%', // Starting top style attribute
       endingTop: '10%', // Ending top style attribute
-      // Callback for Modal close
     }
   );
   });
+
+ (function ($) {
+    $(function () {
+
+        //initialize all modals           
+        $('.modal').modal();
+
+        //now you can open modal from code
+        $('#modal1').modal('open');
+
+        //or by click on trigger
+        $('.trigger-modal').modal();
+
+    }); // end of document ready
+});
