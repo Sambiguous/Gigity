@@ -7,10 +7,9 @@
 	    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
 	    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	    <!-- media query style -->
-	    <link rel="stylesheet" media="mediatype and|not|only (media feature)" href="mystylesheet.css">
 
 	    <!-- css -->
-	    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	    <link rel="stylesheet" type="text/css" href="assets/css/profile-style.css">
 
 	    <!-- Fonts -->
 	    <link href="https://fonts.googleapis.com/css?family=Encode+Sans+Expanded" rel="stylesheet">
@@ -24,61 +23,128 @@
 		<!-- Navigation bar -->
 	  <nav>
 	    <div class="nav-wrapper">
-	      <a href="#!" class="brand-logo"> Gigity</a>
+	      <img src="assets/css/images/black-logo.png" class="brand-logo">
 	      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
 	      <ul class="right hide-on-med-and-down">
-	        <li><a href="sass.html">My Account</a></li>
-	        <li><a href="badges.html">Make a Profile</a></li>
+	        <li><a href="freelancer-board.html" id="browse">Browse Freelancers</a></li>
 	      </ul>
 	      <ul class="side-nav" id="mobile-demo">
-	        <li><a href="sass.html">My Account</a></li>
-	        <li><a href="badges.html">Make a Profile</a></li>
+	        <li><a href="freelancer-board.html">Browse Freelancers</a></li>
 	      </ul>
 	    </div>
 	  </nav>
-	  <br>
 
     <!-- display the freelancers profile information -->
+<div class="container">
+	 <div class="row">
+	    <div class="col s12 m7 offset-m2 l7 offset-l2 z-depth-6">
+	      <div class="card profile-card">
+	        <div class="card-image">
+	          <img id="profile-img" src="https://static.pexels.com/photos/769746/pexels-photo-769746.jpeg">
+	        </div>
+	        <div class="card-content">
+	        <span class="card-title"><h3>John Doe</h3></span>
+	        <span id="card-occupation"><p>Data Scientist | 
+	        <span id="card-rate">$80 per Hour</p></span>
+	        <p id="email">jdoe@gmail.com</p>
+	        </div>
 
-<div class="row center-align">
+			<div class="contact"><a class="btn modal-trigger waves-effect waves-light btn-large" id="contact-modal" data-target="contact-modal" href="#contact-modal">Contact</a></div>
 
-	<div class="profile col s12">
-		<img id="profile-img" src="https://static.pexels.com/photos/769746/pexels-photo-769746.jpeg">
-	</div>
-	<div class="profile col s12">
-		<span class="card-title">John Doe</span>
-        <p id="card-occupation">Data Scientist</p>
-        <p id="card-rate">$80 per Hour</p>
-        <p id="email">jdoe@gmail.com</p>
-    </div>
-</div>
+			<div class="review"><a class="btn modal-trigger waves-effect waves-light btn-large" id="review-modal" data-target="review-modal" href="#review-modal">Leave a Review</a></div>
 
-	<!-- displays the reviews from other employees -->
-<div class="row center-align">
+	      </div>
+	    </div>
+	  </div>
 	
-	<div class="col s12">
-	 <div class="card blue-grey darken-1">
-        <div class="card-content white-text">
-            <span cid="employer">Employer Review</span>
-            <p id="rating">5</p>
-            <p id="review">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit.</p>
-        </div>
-      </div>
-    </div>
+	<!-- displays the reviews from other employers -->
+
+	<div class="row">
+	
+		<div class="col s12 m7 offset-m2 l7 offset-l2 z-depth-6">
+		 <div class="card review-card darken-1">
+	        <div class="card-content">
+	            <span id="employer">Employer </span><span id="rating"> 5/5</span>
+	            <p id="review">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit.</p>
+	        </div>
+	      </div>
+	    </div>
+
+	</div>
 
 </div>
 
+<!-- contact modal -->
+
+  <div id="contact-modal" class="modal modal-fixed-footer">
+	    <div class="modal-content">
+	     <form class="col s12">
+
+	    <h3>Contact</h3>
+
+	    <div class="input-field col s6">
+          <input id="name" type="text" class="validate">
+          <label for="name">Name</label>
+        </div>
+
+        <div class="input-field col s6">
+          <input id="email" type="text" class="validate">
+          <label for="email">Email</label>
+        </div>
+
+        <div class="input-field col s6">
+          <input id="message" type="text" rows="10" class="validate">
+          <label for="message">Message</label>
+        </div>
+
+	    <div class="modal-footer">
+	      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Send</a>
+	    </div>
+
+	 	</form>
+	 	</div>
+  </div>
 
 
+  <!-- review modal -->
 
+  <div id="review-modal" class="modal modal-fixed-footer">
+	    <div class="modal-content">
+    		<form>
 
+    	<h2>Review a Freelancer</h2>
 
+	    <div class="input-field col s10">
+          <input id="name" type="text" class="validate">
+          <label for="name">Your Name</label>
+        </div>
+
+       	 <div class="input-field col s2" id="rating">
+    		<select>
+      		  <option value="" disabled selected>Rating</option>
+		      <option value="1">1</option>
+		      <option value="2">2</option>
+		      <option value="3">3</option>
+		      <option value="4">4</option>
+		      <option value="5">5</option>
+		    </select>
+        </div>
+
+        <div class="input-field col s12">
+           <textarea id="review" class="materialize-textarea"></textarea>
+           <label for="review">Write a Review</label>
+        </div>
+
+		</form>
+	</div>
+</div>
 
 	<!-- scripts -->
 
  	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
     <script src="assets/js/javascript.js"></script>
+
 
 
 </body>

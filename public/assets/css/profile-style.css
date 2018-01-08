@@ -1,0 +1,93 @@
+html { 
+  background: url(images/pexels-photo-3961582.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+body {
+	margin: auto;
+}
+
+h1 {
+	font-size: 40px;
+}
+
+h3 {
+	font-size: 25px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+.card-title{
+	margin-top: 0px;
+}
+
+#contact-modal {
+	margin-top: 0px;
+}
+
+.profile-card {
+	margin-top: 20px;
+}
+
+.container {
+	display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
+.card {
+	border-radius: 10px;
+	text-align: center;
+	font-family: 'Encode Sans Expanded', sans-serif;
+}
+
+.review-card {
+	margin-top: -10px;
+	font-family: 'Encode Sans Expanded', sans-serif;
+	color: grey;
+	text-align: left;
+}
+
+.nav-wrapper {
+ background-color: white;
+}
+
+.brand-logo {
+	width: 110px;
+}
+
+#big-logo {
+	width: 100%;
+}
+
+.button-collapse {
+	color: grey;
+}
+
+#browse {
+	color: grey;
+}
+
+.btn-large {
+	width: 90%;
+	margin: 10px;
+	background-color: white;
+	opacity: .6;
+	font-family: 'Encode Sans Expanded', sans-serif;
+	color: #282734;
+	font-weight: bold;
+}
+
+.btn-large:hover {
+		background-color: white;
+		opacity: 1;
+}
+
+#employer {
+	font-size: 20px;
+	text-transform: uppercase;
+	font-weight: bold;
+}
