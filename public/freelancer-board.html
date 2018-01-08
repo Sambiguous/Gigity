@@ -10,10 +10,10 @@
 	    <link rel="stylesheet" media="mediatype and|not|only (media feature)" href="mystylesheet.css">
 
 	    <!-- css -->
-	    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	    <link rel="stylesheet" type="text/css" href="assets/css/profile-style.css">
 
 	    <!-- Fonts -->
-	    <link href="https://fonts.googleapis.com/css?family=Encode+Sans+Expanded" rel="stylesheet">
+	    <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Encode+Sans+Expanded" rel="stylesheet">
 
 	    <!-- Firebase -->
 	    <script src="https://www.gstatic.com/firebasejs/4.6.0/firebase.js"></script>
@@ -38,23 +38,25 @@
 
 
 		<!-- <h2>Find a Freelancer</h2> -->
-			<div class="row">
-		       <div class="col s12 m12 l12">
-					<img src= "assets/css/images/pexels-photo-257937.jpg" id="board-photo">
-				</div>
-			</div>	
+
+		<div class="parallax-container">
+      		<div class="parallax"><img src="assets/css/images/pexels-photo.jpg"></div>
+      		<h2>BROWSE OUR TOP TALENT</h2>
+    	</div>
+					
+
 
 	<form action="#">
 
     	<div class="row center-align" id="buttons">
 
-		 <div class="col l3 m3 s6"><a class="btn waves-effect waves-light btn-large">Front End Developer</a></div>
+		 <div class="col l3 m6 s6"><a class="btn waves-effect waves-light btn-large" id="display-frontend">Front End Developer</a></div>
 
-		 <div class="col l3 m3 s6"><a class="btn waves-effect waves-light btn-large">Back End Developer</a></div>
+		 <div class="col l3 m6 s6"><a class="btn waves-effect waves-light btn-large" id="display-backend">Back End Developer</a></div>
 
-		 <div class="col l3 m3 s6"><a class="btn waves-effect waves-light btn-large">Data Scientist</a></div>
+		 <div class="col l3 m6 s6"><a class="btn waves-effect waves-light btn-large" id="display-data">Data Scientist</a></div>
 
-		 <div class="col l3 m3 s6"><a class="btn waves-effect waves-light btn-large">IT</a></div>
+		 <div class="col l3 m6 s6"><a class="btn waves-effect waves-light btn-large" id="display-it">IT</a></div>
 
 	</div>
 
@@ -87,7 +89,7 @@
 
 						<!-- this needs to go to the employer mail form -->
 
-                        <a class="btn-floating halfway-fab waves-effect waves-light">
+                        <a href="freelancer-account.html" class="btn-floating halfway-fab waves-effect waves-light">
           <i class="material-icons">email</i></a>
                     </div>
                     <div class="card-content">
@@ -100,9 +102,6 @@
             </div>
         </div>
 
-
-
-	</form>
 </div>
 
 
@@ -111,6 +110,7 @@
 
  	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+
     <script src="assets/js/javascript.js"></script>
 
 

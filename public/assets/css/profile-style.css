@@ -1,23 +1,29 @@
-html { 
-  background: url(images/pexels-photo-3961582.jpg) no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-
 body {
-	margin: auto;
+	/*margin: auto;*/
 }
 
 h1 {
 	font-size: 40px;
 }
 
+h2 {
+	font-family: 'Fjalla One', sans-serif;
+	color: white;
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 50px;
+	margin-top: 150px;
+	text-shadow: 1px 1px 8px #696969;
+}
+
 h3 {
 	font-size: 25px;
 	margin-top: 0px;
 	margin-bottom: 0px;
+}
+
+.parallax-container {
+	max-height: 350px;
 }
 
 .card-title{
@@ -71,6 +77,12 @@ h3 {
 	color: grey;
 }
 
+#buttons {
+	margin-top: 10px;
+	width: 80%;
+	margin-bottom: 0px;
+}
+
 .btn-large {
 	width: 90%;
 	margin: 10px;
@@ -90,4 +102,20 @@ h3 {
 	font-size: 20px;
 	text-transform: uppercase;
 	font-weight: bold;
+}
+
+@media screen and (max-width: 599px) {
+
+#buttons {
+	margin-top: 20px;
+	width: 100%;
+	margin-bottom: 0px;
+}
+
+.btn-large {
+    	display: block;
+    	margin: 0 auto;
+    	margin-bottom: 10px;
+    	width: 100%;
+    }
 }
