@@ -29,13 +29,8 @@ function objToSql(ob) {
 var orm = {
 
   select: function(table, condition, cb){
-    let sql = "SELECT * FROM ?? WHERE ?? = ?;";
-    let params = [table];
-
-    for(i in condition){
-      params.push(i);
-      params.push(condition[i]);
-    }
+    let sql = "SELECT * FROM ?? WHERE ?;";
+    let params = [table, condition];
 
     connection.query(sql, params, function(err, result){
       if(err) throw err;

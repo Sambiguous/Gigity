@@ -27,6 +27,7 @@ router.post("/login", function(req, res){
         if(result[0]){
             if(req.body.pass === result[0].userpassword){
                 //determine if employer or freelancer and set redirect url
+                var url = result[0].user_type = 'F' ? '/freelancer' : '/employer'
 
                 res.send({
                     login: "success",
