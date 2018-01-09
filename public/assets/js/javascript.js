@@ -1,27 +1,42 @@
-  $(document).ready(function() {
-    $('select').material_select();
-    $('.parallax').parallax();
-  });
+$(document).ready(function() {
+  $('select').material_select();
+  $('.parallax').parallax();
+});
 
 $(".button-collapse").sideNav();
+$('.dropdown-button').dropdown('open');
+$('.dropdown-button').dropdown('close');
 
-
- $('.dropdown-button').dropdown('open');
- $('.dropdown-button').dropdown('close');
-
-
- $(document).ready(function(){
-  	$('.modal').modal({
-      dismissible: true, // Modal can be dismissed by clicking outside of the modal
-      opacity: .5, // Opacity of modal background
-      inDuration: 300, // Transition in duration
-      outDuration: 200, // Transition out duration
-      startingTop: '4%', // Starting top style attribute
-      endingTop: '10%', // Ending top style attribute
-    }
-  );
+$(document).ready(function(){
+  $('.modal').modal({
+    dismissible: true, // Modal can be dismissed by clicking outside of the modal
+    opacity: .5, // Opacity of modal background
+    inDuration: 300, // Transition in duration
+    outDuration: 200, // Transition out duration
+    startingTop: '4%', // Starting top style attribute
+    endingTop: '10%', // Ending top style attribute
   });
+    
 
+  $('#login').on("click", function(event){
+    event.preventDefault();
+    $.post({
+      url: "/login",
+      data: {
+        email: $("#email").val(),
+        pass: $("#password").val()
+      }
+    }).done(function(response){
+      if(response === "login success"){
+        //successfull login code goes here
+      } else{
+        //failed login code goes here
+      }
+    })
+  })
+});
+
+// Callback for Modal close
  (function ($) {
     $(function () {
 
