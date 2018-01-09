@@ -8,6 +8,7 @@ CREATE TABLE users
 	user_id INT NOT NULL AUTO_INCREMENT,
 	username VARCHAR(45) NOT NULL,
 	userpassword VARCHAR(45) NOT NULL,
+    user_type TINYTEXT NOT NULL,
 	PRIMARY KEY (user_id)
 );
 

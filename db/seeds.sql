@@ -11,8 +11,8 @@ INSERT INTO skill_types (descr) VALUES ('Back End Developer');
 INSERT INTO skill_types (descr) VALUES ('Data Scientist');
 INSERT INTO skill_types (descr) VALUES ('IT');
 
-INSERT INTO users (username, userpassword) VALUES ('JohnDoe', 'DoJo1');
-INSERT INTO users (username, userpassword) VALUES ('BossMan', 'Bossy2');
+INSERT INTO users (username, userpassword, user_type) VALUES ('JohnDoe', 'DoJo1', 'F');
+INSERT INTO users (username, userpassword, user_type) VALUES ('BossMan', 'Bossy2', 'E');
 
 INSERT INTO freelancers (freelancer_id, first_name, last_name, email, phone, photo, rate, bio) VALUES (1, 'John', 'Doe', 'john@f-society.com', '555/555-5555', 'https://static.pexels.com/photos/92129/pexels-photo-92129.jpeg', 75.00, 'Able to blend in seamlessly to any office environment');
 
