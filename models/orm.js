@@ -39,7 +39,7 @@ var orm = {
     var querystring = "SELECT * FROM ?? WHERE ?;"
     var params = [table, condition];
 
-    connectyion.query(querystring, params, function(err, result){
+    connection.query(querystring, params, function(err, result){
       if(err) throw err;
 
       callback(result);
