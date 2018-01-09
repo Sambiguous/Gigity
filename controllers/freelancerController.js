@@ -11,7 +11,7 @@ var freelancers = require("../models/freelancers.js");
 router.get("/", function(req, res) {
     //code to read cookies goes here
 
-    fs.readFile(PATH + "freelancer-account.html", "utf-8", function(err, data){
+    fs.readFile(PATH + "freelancer-view.html", "utf-8", function(err, data){
         if(err) throw err;
 
         res.send(data);
