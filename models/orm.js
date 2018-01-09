@@ -37,8 +37,6 @@ var orm = {
       params.push(condition[i]);
     }
 
-    // console.log(sql, params)
-
     connection.query(sql, params, function(err, result){
       if(err) throw err;
 
@@ -55,6 +53,7 @@ var orm = {
       cb(result);
     });
   },
+
   create: function(table, cols, vals, cb) {
     var queryString = "INSERT INTO " + table;
 
@@ -92,6 +91,7 @@ var orm = {
       cb(result);
     });
   },
+  
   delete: function(table, condition, cb) {
     var queryString = "DELETE FROM " + table;
     queryString += " WHERE ";
