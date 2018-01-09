@@ -27,6 +27,7 @@ $(document).ready(function() {
       if(response.login === "success"){
         window.location.href = response.url;
       } else{
+        
         //failed login code goes here
       }
     });

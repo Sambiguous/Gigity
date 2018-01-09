@@ -102,9 +102,9 @@ var orm = {
   },
 
     findFreelancerReviewsByID: function(user_id, callback) {
-    var queryString = "SELECT reviews.review_id, reviews.reviewer_id, freelancers.first_name, freelancers.last_name, reviews.reviewee_id, employers.company, employers.first_name, employers.last_name, reviews.reviewee_id, reviews.rating, reviews.review FROM reviews INNER JOIN employers ON reviews.reviewer_id = employers.employer_id INNER JOIN freelancers ON freelancers.freelancer_id = reviews.reviewee_id WHERE ? ";
+    var queryString = "SELECT reviews.review_id, reviews.reviewer_id, freelancers.first_name, freelancers.last_name, reviews.reviewee_id, employers.company, employers.first_name, employers.last_name, reviews.reviewee_id, reviews.rating, reviews.review FROM reviews INNER JOIN employers ON reviews.reviewer_id = employers.employer_id INNER JOIN freelancers ON freelancers.freelancer_id = reviews.reviewee_id WHERE freelancers.freelancer_id = ?;";
 
-    connection.query(queryString, { freelancers.freelancer_id: user_id }, function(err, result) {
+    connection.query(queryString, [user_id], function(err, result) {
       if (err) {
         throw err;
       }
@@ -113,9 +113,9 @@ var orm = {
   },
 
     findFreelancerBySkill: function(skill, callback) {
-    var queryString = "SELECT * FROM freelancers INNER JOIN freelancer_skills ON freelancers.freelancer_id = freelancer_skills.freelancer_id INNER JOIN skill_types ON freelancer_skills.skill_id = skill_types.type_id WHERE freelancer_skills.skill_status = true AND ? ";
+    var queryString = "SELECT * FROM freelancers INNER JOIN freelancer_skills ON freelancers.freelancer_id = freelancer_skills.freelancer_id INNER JOIN skill_types ON freelancer_skills.skill_id = skill_types.type_id WHERE freelancer_skills.skill_status = true AND skill_types.descr = ?;";
 
-    connection.query(queryString, { skill_types.descr: skill }, function(err, result) {
+    connection.query(queryString, [skill], function(err, result) {
       if (err) {
         throw err;
       }
@@ -124,9 +124,9 @@ var orm = {
   },
 
     getFreelancerSkillsByID: function(user_id, callback) {
-    var queryString = "SELECT * FROM freelancers INNER JOIN freelancer_skills ON freelancers.freelancer_id = freelancer_skills.freelancer_id INNER JOIN skill_types ON freelancer_skills.skill_id = skill_types.type_id WHERE freelancer_skills.skill_status = true AND ? ";
+    var queryString = "SELECT * FROM freelancers INNER JOIN freelancer_skills ON freelancers.freelancer_id = freelancer_skills.freelancer_id INNER JOIN skill_types ON freelancer_skills.skill_id = skill_types.type_id WHERE freelancer_skills.skill_status = true AND freelancers.freelancer_id = ?;";
 
-    connection.query(queryString, { freelancers.freelancer_id: user_id }, function(err, result) {
+    connection.query(queryString, [user_id], function(err, result) {
       if (err) {
         throw err;
       }
