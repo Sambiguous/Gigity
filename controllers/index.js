@@ -7,12 +7,12 @@ var PATH = './public/'
 
 var orm = require('../models/orm.js')
 
-
+//CUSTOM MODELS
 router.use('/freelancer', require('./freelancerController'))
 router.use('/employer', require('./employerController'))
 
 
-//HOMEPAGE
+//HOMEPAGE ROUTE
 router.get("/", function(req, res) {
 
     fs.readFile(PATH + 'home.html', 'utf-8', function(err, data){
@@ -21,13 +21,13 @@ router.get("/", function(req, res) {
     })
 });
 
-//LOGIN
+//LOGIN ROUTE
 router.post("/login", function(req, res){
 
     orm.select('users', {username: req.body.email}, function(result){
         if(result[0]){
             if(req.body.pass === result[0].userpassword){
-                //validation success stuff goes here
+                
                 res.send("login success");
             } else{
                 res.send("login failed");
