@@ -23,14 +23,15 @@
 		<!-- Navigation bar -->
 	  <nav>
 	    <div class="nav-wrapper">
-	      <img src="assets/css/images/black-logo.png" class="brand-logo">
-	      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-	      <ul class="right hide-on-med-and-down">
-	        <li><a href="freelancer-board.html" id="browse">Browse Freelancers</a></li>
-	      </ul>
-	      <ul class="side-nav" id="mobile-demo">
-	        <li><a href="freelancer-board.html">Browse Freelancers</a></li>
-	      </ul>
+		    <a href="home.html">
+		      <img src="assets/css/images/black-logo.png" class="brand-logo"></a>
+		      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+		      <ul class="right hide-on-med-and-down">
+		        <li><a href="freelancer-board.html" id="browse">Browse Freelancers</a></li>
+		      </ul>
+		      <ul class="side-nav" id="mobile-demo">
+		        <li><a href="freelancer-board.html">Browse Freelancers</a></li>
+		      </ul>
 	    </div>
 	  </nav>
 
@@ -45,13 +46,15 @@
 	        <div class="card-content">
 	        <span class="card-title"><h3>John Doe</h3></span>
 	        <span id="card-occupation"><p>Data Scientist | 
-	        <span id="card-rate">$80 per Hour</p></span>
+	        <span id="card-rate">$80 per hour</p></span>
 	        <p id="email">jdoe@gmail.com</p>
 	        </div>
 
-			<div class="contact"><a class="btn modal-trigger waves-effect waves-light btn-large" href="#contact-modal" id="contact-modal" data-target="contact-modal" >Contact</a></div>
+			<!-- card buttons to open modals -->
 
-			<div class="review"><a class="btn modal-trigger waves-effect waves-light btn-large" id="review-modal" data-target="review-modal" href="#review-modal">Leave a Review</a></div>
+			<div class="contact"><a class="btn modal-trigger waves-effect waves-light btn-large" data-target="contact-modal" href="#contact-modal">Contact</a></div>
+
+		 	<div class="review"><a class="btn modal-trigger waves-effect waves-light btn-large" data-target="review-modal" href="#review-modal">Leave a Review</a></div>
 
 	      </div>
 	    </div>
@@ -112,7 +115,7 @@
 	    <div class="modal-content">
     		<form>
 
-    	<h2>Review a Freelancer</h2>
+    	<h3>Review a Freelancer</h3>
 
 	    <div class="input-field col s10">
           <input id="name" type="text" class="validate">
