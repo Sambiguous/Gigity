@@ -27,7 +27,7 @@ h3 {
 }
 
 .card-title{
-	margin-top: 0px;
+	margin-top: -10px;
 }
 
 #contact-modal {
@@ -96,6 +96,24 @@ h3 {
 .btn-large:hover {
 		background-color: white;
 		opacity: 1;
+}
+
+#contact-btn {
+	margin-top: 5;
+	margin-bottom: -6px;
+	opacity: .85;
+	background-color: #282735;
+	font-family: 'Encode Sans Expanded', sans-serif;
+	color: white;
+}
+
+#contact-btn:hover {
+	margin-top: 5;
+	margin-bottom: -6px;
+	opacity: 1;
+	background-color: #282735;
+	font-family: 'Encode Sans Expanded', sans-serif;
+	color: white;
 }
 
 #employer {
