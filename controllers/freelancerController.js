@@ -9,9 +9,13 @@ var freelancers = require("../models/freelancers.js");
 
 //Create all our routes and set up logic within those routes where required.
 router.get("/", function(req, res) {
+    //code to read cookies goes here
 
-    
-    res.send("this is the freelancer homepage")
+    fs.readFile(PATH + "freelancer-account.html", "utf-8", function(err, data){
+        if(err) throw err;
+
+        res.send(data);
+    })
 
 });
 

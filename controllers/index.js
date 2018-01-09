@@ -4,7 +4,6 @@ var fs = require('fs');
 var router = express.Router();
 var PATH = './public/'
 
-
 var orm = require('../models/orm.js')
 
 //CUSTOM MODELS
@@ -27,8 +26,12 @@ router.post("/login", function(req, res){
     orm.select('users', {username: req.body.email}, function(result){
         if(result[0]){
             if(req.body.pass === result[0].userpassword){
-                
-                res.send("login success");
+                //determine if employer or freelancer and set redirect url
+
+                res.send({
+                    login: "success",
+                    url: "/freelancer"
+                })
             } else{
                 res.send("login failed");
             }

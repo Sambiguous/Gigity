@@ -13,26 +13,6 @@ $(document).ready(function() {
     startingTop: '4%', // Starting top style attribute
     endingTop: '10%', // Ending top style attribute
   });
-    
-
-  $('#login').on("click", function(event){
-    event.preventDefault();
-    $.post({
-      url: "/login",
-      data: {
-        email: $("#email").val(),
-        pass: $("#password").val()
-      }
-    }).done(function(response){
-      console.log(response)
-      if(response === "login success"){
-        //successfull login code goes here
-      } else{
-        //failed login code goes here
-      };
-    });
-  });
-
 
   $('.modal').modal({
     dismissible: true, // Modal can be dismissed by clicking outside of the modal
@@ -53,13 +33,14 @@ $(document).ready(function() {
         pass: $("#password").val()
       }
     }).done(function(response){
-      if(response === "login success"){
-        //successfull login code goes here
+      if(response.login === "success"){
+
+        window.location.href = response.url;
       } else{
         //failed login code goes here
       }
-    })
-  })
+    });
+  });
 });
 
 
