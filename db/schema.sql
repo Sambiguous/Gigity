@@ -72,7 +72,7 @@ CREATE TABLE jobs
 	employer_id INT,
     freelancer_id INT,
     job_descr LONGTEXT,
-    job_status INT,
+    job_status INT DEFAULT 1,
     FOREIGN KEY(employer_id) REFERENCES employers(employer_id),
 	FOREIGN KEY(freelancer_id) REFERENCES freelancers(freelancer_id),
     FOREIGN KEY(job_status) REFERENCES job_stats(status_id),
@@ -82,11 +82,13 @@ CREATE TABLE jobs
 CREATE TABLE reviews
 (
 	review_id INT NOT NULL AUTO_INCREMENT, 
+    job_id INT,
     reviewer_id INT,
     reviewee_id INT,
     rating TINYINT,
     review LONGTEXT,
-	FOREIGN KEY(reviewer_id) REFERENCES users(user_id),
+	FOREIGN KEY(job_id) REFERENCES jobs(job_id),
+    FOREIGN KEY(reviewer_id) REFERENCES users(user_id),
 	FOREIGN KEY(reviewee_id) REFERENCES users(user_id),
 	PRIMARY KEY (review_id)
 );
