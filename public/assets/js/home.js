@@ -27,8 +27,7 @@ $(document).ready(function() {
       if(response.status === "success"){
         window.location.href = response.url;
       } else{
-        
-        //failed login code goes here
+        $(".error-msg").html("Incorrect Password");
       }
     });
   });

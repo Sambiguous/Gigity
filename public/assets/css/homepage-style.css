@@ -65,6 +65,12 @@ h2 {
 	width: 50%;
 }
 
+.error-msg {
+    font-family: 'Encode Sans Expanded', sans-serif;
+    font-size: 13px;
+    color: red;
+}
+
 
 @media screen and (max-width: 1800px) {
     #big-logo {
