@@ -1,5 +1,6 @@
 var express = require("express");
 var bodyParser = require("body-parser");
+var cookieParser = require("cookie-parser");
 var methodOverride = require("method-override");
 
 //test
@@ -10,6 +11,8 @@ var app = express();
 
 // Serve static content for the app from the "public" directory in the application directory.
 app.use(express.static("public"));
+
+app.use(cookieParser());
 
 app.use(bodyParser.urlencoded({ extended: false }));
 

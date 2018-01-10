@@ -6,25 +6,24 @@ USE gigity_DB;
 CREATE TABLE users
 (
 	user_id INT NOT NULL AUTO_INCREMENT,
-	username VARCHAR(45) NOT NULL,
-	userpassword VARCHAR(45) NOT NULL,
+	user_email VARCHAR(100) NOT NULL,
+	user_password VARCHAR(45) NOT NULL,
     user_type TINYTEXT NOT NULL,
 	PRIMARY KEY (user_id)
 );
 
 CREATE TABLE freelancers
 (
-	id INT NOT NULL AUTO_INCREMENT,
-    freelancer_id INT,
+	frl_id INT NOT NULL AUTO_INCREMENT,
+    user_id INT,
 	first_name VARCHAR(50) NOT NULL,
     last_name VARCHAR(50) NOT NULL,
     email VARCHAR(100) NOT NULL,
-    phone VARCHAR(12) NOT NULL,
     photo VARCHAR(255) NOT NULL,
     rate DECIMAL(6,2),
 	bio LONGTEXT,
-	FOREIGN KEY(freelancer_id) REFERENCES users(user_id),
-    PRIMARY KEY (id)
+	FOREIGN KEY(user_id) REFERENCES users(user_id),
+    PRIMARY KEY (frl_id)
 );
 
 CREATE TABLE skill_types
@@ -38,10 +37,10 @@ CREATE TABLE skill_types
 CREATE TABLE freelancer_skills
 (
 	fls_id INT NOT NULL AUTO_INCREMENT,
-    freelancer_id INT,
+    user_id INT,
     skill_id INT,
     skill_status BOOLEAN DEFAULT TRUE,
-    FOREIGN KEY(freelancer_id) REFERENCES freelancers(freelancer_id),
+    FOREIGN KEY(user_id) REFERENCES freelancers(user_id),
     FOREIGN KEY(skill_id) REFERENCES skill_types(type_id),
     PRIMARY KEY (fls_id) 
 );
@@ -49,14 +48,14 @@ CREATE TABLE freelancer_skills
 
 CREATE TABLE employers
 (
-	id INT NOT NULL AUTO_INCREMENT,
-    employer_id INT,
+	emp_id INT NOT NULL AUTO_INCREMENT,
+    user_id INT,
 	first_name VARCHAR(50) NOT NULL,
     last_name VARCHAR(50) NOT NULL,
     email VARCHAR(100) NOT NULL,
     company VARCHAR(255),
-    FOREIGN KEY(employer_id) REFERENCES users(user_id),
-	PRIMARY KEY (id)
+    FOREIGN KEY(user_id) REFERENCES users(user_id),
+	PRIMARY KEY (emp_id)
 );
 
 CREATE TABLE job_stats
@@ -73,8 +72,8 @@ CREATE TABLE jobs
     freelancer_id INT,
     job_descr LONGTEXT,
     job_status INT,
-    FOREIGN KEY(employer_id) REFERENCES employers(employer_id),
-	FOREIGN KEY(freelancer_id) REFERENCES freelancers(freelancer_id),
+    FOREIGN KEY(employer_id) REFERENCES employers(emp_id),
+	FOREIGN KEY(freelancer_id) REFERENCES freelancers(frl_id),
     FOREIGN KEY(job_status) REFERENCES job_stats(status_id),
 	PRIMARY KEY (job_id)
 );

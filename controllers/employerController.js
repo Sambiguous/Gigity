@@ -9,18 +9,36 @@ var employers = require("../models/employers.js");
 
 //Create all our routes and set up logic within those routes where required.
 router.get("/", function(req, res) {
+    console.log(req.cookies);
 
-    //res.send(PATH + employer-review.html)
-    res.send("this is the employer page")
-
+    fs.readFile(PATH + 'freelancer-board.html', 'utf-8', function(err, data){
+        if(err) throw err;
+        res.send(data);
+    });
 });
 
 router.post("/", function(req, res) {
 
 });
 
-router.put("/", function(req, res) {
+router.put("/signup", function(req, res) {
 
+    employers.createNew(req.body, function(result){
+        if(result === "Database Error"){
+            res.send({
+                status: "Internal Database Error"
+            });
+        } else{
+            //set cookie with relavent data
+            res.cookie('type', result.type);
+            res.cookie('id', result.user_id);
+
+            res.send({
+                status: 'success',
+                url: '/employers'
+            });
+        };
+    });
 });
 
 router.delete("/", function(req, res) {

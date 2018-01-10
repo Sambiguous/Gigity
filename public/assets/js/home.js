@@ -19,18 +19,39 @@ $(document).ready(function() {
     $.post({
       url: "/login",
       data: {
-        email: $("#username").val(),
+        email: $("#email").val(),
         pass: $("#password").val()
       }
     }).done(function(response){
       console.log(response);
-      if(response.login === "success"){
+      if(response.status === "success"){
         window.location.href = response.url;
       } else{
         
         //failed login code goes here
       }
     });
+  });
+
+  $('#emp-sign-up').on('click', function(event){
+    event.preventDefault();
+    $.post({
+      url: '/employers/signup?_method=PUT',
+      data: {
+        type: 'E',
+        password: "PLACEHOLDER",
+        first_name: $('#first_name_employer').val(),
+        last_name: $('#last_name_employer').val(),
+        email: $('#employer_email').val(),
+        company: $('#company-name').val(),
+      }
+    }).done(function(response){
+      if(response.status === 'success'){
+        window.location.href = response.url;
+      } else{
+        //failed account creation code goes here
+      }
+    })
   });
 });
 

@@ -9,14 +9,17 @@ var freelancers = require("../models/freelancers.js");
 
 //Create all our routes and set up logic within those routes where required.
 router.get("/", function(req, res) {
-    //code to read cookies goes here
-
-    fs.readFile(PATH + "freelancer-view.html", "utf-8", function(err, data){
-        if(err) throw err;
-
-        res.send(data);
-    })
-
+    if(req.cookies.type === 'F'){
+        fs.readFile(PATH + "freelancer-view.html", "utf-8", function(err, data){
+            if(err) throw err;
+    
+            res.send(data);
+        })
+    } else{
+        res.clearCookie('type');
+        res.clearCookie('id');
+        res.redirect('/')
+    }
 });
 
 // router.post("/:id", function(req, res) {

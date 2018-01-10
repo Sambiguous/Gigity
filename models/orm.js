@@ -46,6 +46,32 @@ var orm = {
     })
   },
 
+  //INSERT NEW ROW INTO ANY TABLE
+  insertOne: function(table, valueObject, callback){
+    let sql = "INSERT INTO ?? (??) VALUES (?);";
+    let params = [table];
+
+    let param_cols = [];
+    let param_vals = [];
+
+    for(var key in valueObject){
+      param_cols.push(key);
+      param_vals.push(valueObject[key])
+    };
+
+    params.push(param_cols);
+    params.push(param_vals);
+
+    connection.query(sql, params, function(err, result, feilds){
+      if(err){
+        callback("Database Error");
+        throw err;
+      }
+
+      callback(result)
+    })
+  },
+
   selectAll: function(table, callback) {
     var queryString = "SELECT * FROM ?? ";
 
@@ -134,19 +160,19 @@ var orm = {
     });
   },
 
-  insertOne: function(table, column, value, callback) {
-    var queryString = "INSERT INTO " + table + " (" + column.toString() + ") VALUES (?) ";
+  // insertOne: function(table, column, value, callback) {
+  //   var queryString = "INSERT INTO " + table + " (" + column.toString() + ") VALUES (?) ";
 
-    console.log(queryString);
+  //   console.log(queryString);
 
-    connection.query(queryString, value, function(err, result) {
-      if (err) {
-        throw err;
-      }
+  //   connection.query(queryString, value, function(err, result) {
+  //     if (err) {
+  //       throw err;
+  //     }
 
-      callback(result);
-    });
-  },
+  //     callback(result);
+  //   });
+  // },
   updateOne: function(table, objColVal, condition, callback) {
     var queryString = "UPDATE " + table + " SET " + objectToSql(objColVal) + " WHERE " + condition;
 
