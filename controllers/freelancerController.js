@@ -13,17 +13,26 @@ var freelancers = require("../models/freelancers.js");
 //FREELANCER LANDING PAGE ROUTE
 //==============================
 router.get("/", function(req, res) {
-    if(req.cookies.type === 'F'){
-        fs.readFile(PATH + 'freelancer-view.html', 'utf-8', function(err, data){
-            if(err) throw err;
+    //if(req.cookies.type === 'F'){
+        res.render('../views/freelancer-view.handlebars', {
+            first_name: "test",
+            last_name: "test",
+            skills: ["skill1", "skill2"],
+            rate: 45.00,
+            email: "email@email",
+            photo: 'https://static.pexels.com/photos/324658/pexels-photo-324658.jpeg',
+            reviews: [{review: "text"}, {review: "text"}]
+        });
+        // fs.readFile(PATH + 'freelancer-view.html', 'utf-8', function(err, data){
+        //     if(err) throw err;
     
-            res.send(data);
-        })
-    } else{
-        res.clearCookie('type');
-        res.clearCookie('id');
-        res.redirect('/')
-    }
+        //     res.send(data);
+        // })
+    // } else{
+    //     res.clearCookie('type');
+    //     res.clearCookie('id');
+    //     res.redirect('/')
+    // }
 });
 
 //========================
@@ -31,16 +40,11 @@ router.get("/", function(req, res) {
 //========================
 router.post("/signup", function(req, res) {
     console.log(req.body);
+    res.send({
+        url: '/freelancers'
+    })
 
-    res.render('../views/freelancer-view.handlebars', {
-        first_name: "test",
-        last_name: "test",
-        skills: ["skill1", "skill2"],
-        rate: 45.00,
-        email: "email@email",
-        photo: 'https://static.pexels.com/photos/324658/pexels-photo-324658.jpeg',
-        reviews: [{review: "text"}, {review: "text"}]
-    });
+
 
 });
 

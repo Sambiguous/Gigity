@@ -13,12 +13,12 @@ router.use('/employers', require('./employerController'))
 
 //HOMEPAGE ROUTE
 router.get("/", function(req, res) {
-    if(req.cookies.type){ //if cookies are found, send user to relevant landing page
-        let url = req.cookies.type === 'F' ? '/freelancers' : '/employers';
+    //if(req.cookies.type){ //if cookies are found, send user to relevant landing page
+        //let url = req.cookies.type === 'F' ? '/freelancers' : '/employers';
 
-        res.redirect(url);
+        //res.redirect(url);
 
-    } else{ //if no cookies are found, send user to homepage
+    //} else{ //if no cookies are found, send user to homepage
         // fs.readFile(PATH + 'home.html', 'utf-8', function(err, data){
         //     if(err) throw err;
         //     res.send(data)
@@ -33,7 +33,7 @@ router.get("/", function(req, res) {
             reviews: [{review: "text"}, {review: "text"}]
         })
         
-    };
+    //};
 });
 
 //LOGIN ROUTE

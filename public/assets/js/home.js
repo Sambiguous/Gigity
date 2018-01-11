@@ -82,7 +82,8 @@ $(document).ready(function() {
       skills: [['front', $('#front').data('selected') ],['back',$('#back').data('selected') ],['data',$('#data').data('selected') ],['it',$('#it').data('selected') ]]
       }
     }).done(function(result){
-      //do stuff here
+      window.location.href = result.url
+
     })
   
 
