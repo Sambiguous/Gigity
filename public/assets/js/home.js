@@ -13,7 +13,16 @@ $(document).ready(function() {
     startingTop: '4%', // Starting top style attribute
     endingTop: '10%', // Ending top style attribute
   });
-    
+  
+  
+  $('.skill').on('click', function(event){
+    let selected = $(this).data('selected')
+    selected === 0 ? $(this).data('selected', 1) : $(this).data('selected', 0)
+
+     console.log($(this).data('selected'))
+  });
+
+
   $('#login').on("click", function(event){
     event.preventDefault();
     $.post({
@@ -38,11 +47,12 @@ $(document).ready(function() {
       url: '/employers/signup',
       data: {
         type: 'E',
-        password: "PLACEHOLDER",
+        password: $('#employer_password').val(),
         first_name: $('#first_name_employer').val(),
         last_name: $('#last_name_employer').val(),
         email: $('#employer_email').val(),
         company: $('#company-name').val(),
+        
       }
     }).done(function(response){
       if(response.status === 'success'){
@@ -53,15 +63,29 @@ $(document).ready(function() {
     })
   });
 
+
+
   $('#frl-sign-up').on('click', function(event){
+
+
     event.preventDefault();
     $.post({
       url: '/freelancers/signup',
       data: {
         type: 'F',
-        password()
+        password: $('#freelancer_password').val(),
+        first_name: $('#first_name').val(),
+        last_name: $('#last_name').val(),
+        email: $('#freelancer_email').val(),
+        photo: $('#photo').val(),
+        rate: $('#rate').val(),
+      skills: [['front', $('#front').data('selected') ],['back',$('#back').data('selected') ],['data',$('#data').data('selected') ],['it',$('#it').data('selected') ]]
       }
+    }).done(function(result){
+      //do stuff here
     })
+  
+
   })
 });
 
