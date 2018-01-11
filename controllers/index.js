@@ -19,10 +19,20 @@ router.get("/", function(req, res) {
         res.redirect(url);
 
     } else{ //if no cookies are found, send user to homepage
-        fs.readFile(PATH + 'home.html', 'utf-8', function(err, data){
-            if(err) throw err;
-            res.send(data)
-        });
+        // fs.readFile(PATH + 'home.html', 'utf-8', function(err, data){
+        //     if(err) throw err;
+        //     res.send(data)
+        // });
+        res.render('../views/index.handlebars', {
+            first_name: "test",
+            last_name: "test",
+            skills: ["skill1", "skill2"],
+            rate: 45.00,
+            email: "email@email",
+            photo: 'https://static.pexels.com/photos/324658/pexels-photo-324658.jpeg',
+            reviews: [{review: "text"}, {review: "text"}]
+        })
+        
     };
 });
 

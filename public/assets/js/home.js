@@ -67,7 +67,7 @@ $(document).ready(function() {
 
   $('#frl-sign-up').on('click', function(event){
 
-
+    console.log("it worked");
     event.preventDefault();
     $.post({
       url: '/freelancers/signup',

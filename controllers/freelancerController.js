@@ -32,9 +32,7 @@ router.get("/", function(req, res) {
 router.post("/signup", function(req, res) {
     console.log(req.body);
 
-
-
-    res.render(PATH + 'freelancer-view.html', {
+    res.render('../views/freelancer-view.handlebars', {
         first_name: "test",
         last_name: "test",
         skills: ["skill1", "skill2"],
@@ -42,7 +40,7 @@ router.post("/signup", function(req, res) {
         email: "email@email",
         photo: 'https://static.pexels.com/photos/324658/pexels-photo-324658.jpeg',
         reviews: [{review: "text"}, {review: "text"}]
-    })
+    });
 
 });
 
