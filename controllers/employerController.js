@@ -17,7 +17,7 @@ router.get("/", function(req, res) {
     });
 });
 
-router.get('/freelancerBoard', function(req, res){
+router.get('/freelancer-board', function(req, res){
 
     let dummyData =[
         {
@@ -43,8 +43,8 @@ router.get('/freelancerBoard', function(req, res){
         },
     ]
 
-    res.render()
-}
+    res.render('../views/freelancer-board.handlebars', {freelancers: dummyData})
+});
 
 
 router.post("/signup", function(req, res) {
