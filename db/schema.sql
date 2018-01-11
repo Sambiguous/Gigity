@@ -72,8 +72,8 @@ CREATE TABLE jobs
     freelancer_id INT,
     job_descr LONGTEXT,
     job_status INT DEFAULT 1,
-    FOREIGN KEY(employer_id) REFERENCES employers(emp_id),
-	FOREIGN KEY(freelancer_id) REFERENCES freelancers(frl_id),
+    FOREIGN KEY(employer_id) REFERENCES employers(user_id),
+	FOREIGN KEY(freelancer_id) REFERENCES freelancers(user_id),
     FOREIGN KEY(job_status) REFERENCES job_stats(status_id),
 	PRIMARY KEY (job_id)
 );
