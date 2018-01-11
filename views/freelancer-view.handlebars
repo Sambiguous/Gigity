@@ -15,6 +15,7 @@
 	  </nav>
 
     <!-- container displays the freelancers profile information and existing reviews -->
+    
 <div class="container profile-reviews">
 	 <div class="row">
 	    <div class="col s12 m7 offset-m2 l7 offset-l2 z-depth-6">
@@ -44,8 +45,8 @@
 		<div class="col s12 m7 offset-m2 l7 offset-l2 z-depth-6">
 		 <div class="card review-card darken-1">
 	        <div class="card-content">
-	            <span id="employer">Employer </span><span id="rating"> 5/5</span>
-	            <p id="review">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit.</p>
+	            <span id="employer">{{this.reviews.employer}} </span><span id="rating"> {{this.reviews.rating}}/5</span>
+	            <p id="review">{{this.reviews.review}}</p>
 	        </div>
 	      </div>
 	    </div>
