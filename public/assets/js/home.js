@@ -27,7 +27,7 @@ $(document).ready(function() {
       if(response.status === "success"){
         window.location.href = response.url;
       } else{
-        $(".error-msg").html("Incorrect Password");
+        $(".error-msg").html("Incorrect Email or Password");
       }
     });
   });
