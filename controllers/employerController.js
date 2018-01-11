@@ -17,6 +17,35 @@ router.get("/", function(req, res) {
     });
 });
 
+router.get('/freelancerBoard', function(req, res){
+
+    let dummyData =[
+        {
+        first_name: 'john',
+        last_name: 'Doe',
+        skills: ['skill1', 'skill3'],
+        photo: 'url',
+        rate: 5,
+        },
+        {
+        first_name: 'billy',
+        last_name: 'bob',
+        skills: ['skill1'],
+        photo: 'url',
+        rate: 3,
+        },
+        {
+        first_name: 'Jim',
+        last_name: 'Miller',
+        skills: ['skill4'],
+        photo: 'url',
+        rate: 5,
+        },
+    ]
+
+    res.render()
+}
+
 
 router.post("/signup", function(req, res) {
 
