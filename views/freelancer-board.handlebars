@@ -1,0 +1,92 @@
+ <nav>
+	    <div class="nav-wrapper">
+		    <a href="home.html">
+		      <img src="assets/css/images/black-logo.png" class="brand-logo"></a>
+		      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+		      <ul class="right hide-on-med-and-down">
+		        <li><a href="freelancer-board.html" id="browse">Browse Freelancers</a></li>
+		      </ul>
+		      <ul class="side-nav" id="mobile-demo">
+		        <li><a href="freelancer-board.html">Browse Freelancers</a></li>
+		      </ul>
+	    </div>
+	  </nav>
+
+		<!-- <h2>Find a Freelancer</h2> -->
+
+		<div class="parallax-container">
+      		<div class="parallax"><img src="assets/css/images/pexels-photo.jpg"></div>
+      		<h2>BROWSE OUR TOP TALENT</h2>
+    	</div>
+					
+
+
+	<form action="#">
+
+    	<div class="row center-align" id="buttons">
+
+		 <div class="col l3 m6 s6"><a class="btn waves-effect waves-light btn-large" id="display-frontend">Front End Developer</a></div>
+
+		 <div class="col l3 m6 s6"><a class="btn waves-effect waves-light btn-large" id="display-backend">Back End Developer</a></div>
+
+		 <div class="col l3 m6 s6"><a class="btn waves-effect waves-light btn-large" id="display-data">Data Scientist</a></div>
+
+		 <div class="col l3 m6 s6"><a class="btn waves-effect waves-light btn-large" id="display-it">IT</a></div>
+
+	</div>
+
+<!-- checkboxes
+      <input type="checkbox" class="checkbox" id="frontend" />
+      <label for="frontend">Front End Developer</label>
+   
+   
+      <input type="checkbox" class="checkbox" id="backend" />
+      <label for="backend">Front End Developer</label>
+    
+    
+      <input type="checkbox" class="checkbox" id="scientist" />
+      <label for="scientist">Data Scientist</label>
+   
+      <input type="checkbox" class="checkbox" id="it" />
+      <label for="it">IT</label> -->
+
+ 	</form>
+
+
+    <!-- dynamic cards to display the freelancers information -->
+
+<div class="row center-align" id="cards">
+
+				{{#each this.freelancers}}
+
+            <div class="col s12 m4 l3">
+                <div class="card profile-card">
+                    <div class="card-image">
+                        <img id="card-img" src={{this.photo}}>
+                        <span class="card-title"></span>
+						</div>
+						<!-- this needs to go to the employer mail form -->
+
+	                    
+	                    <div class="card-content">
+	                    	<span class="card-title">{{this.first_name}} {{this.last_name}}</span>
+	                        <p id="card-occupation">{{#each this.skills}}{{this}}{{/each}}</p>
+	                        <p id="card-rate">${{this.rate}} per Hour</p>
+	                        <a href="freelancer-account.html" class="btn btn-large" id="contact-btn"><p>Learn More</p></a>
+                    	</div>
+                </div>
+            </div>
+
+				{{/each}}
+        </div>
+
+</div>
+
+
+
+	<!-- scripts -->
+
+ 	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+
+    <script src="assets/js/home.js"></script>
