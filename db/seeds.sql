@@ -18,9 +18,10 @@ INSERT INTO freelancers (user_id, first_name, last_name, email, photo, rate, bio
 
 INSERT INTO employers (user_id, first_name, last_name, email, company) VALUES (2, 'Jeff', 'Smith', 'j.smith@widgets.com', 'Widgets R Us');
 
-INSERT INTO freelancer_skills (user_id, skill_id, skill_status) VALUES (1, 1, true);
-INSERT INTO freelancer_skills (user_id, skill_id, skill_status) VALUES (1, 4, true);
+INSERT INTO freelancer_skills (user_id, skill_id) VALUES (1, 1);
+INSERT INTO freelancer_skills (user_id, skill_id) VALUES (1, 4);
 
-INSERT INTO jobs (employer_id, job_descr, job_status) VALUES (1, 'Create storefront for dark web sales', 1);
+INSERT INTO jobs (employer_id, freelancer_id, job_descr, job_status) VALUES (2, 1, 'Create storefront for dark web sales', 4);
+INSERT INTO jobs (employer_id, job_descr) VALUES (2, 'Create email template');
 
-INSERT INTO reviews (reviewer_id, reviewee_id, rating, review) VALUES (1, 2, 5, 'No direct contact, paid in bitcoin');
+INSERT INTO reviews (job_id, reviewer_id, reviewee_id, rating, review) VALUES (1, 1, 2, 5, 'No direct contact, paid in bitcoin');

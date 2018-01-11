@@ -95,7 +95,7 @@ var orm = {
   },
 
   addEmployer: function(values, callback) {
-    var queryString = "INSERT INTO employers (employer_id, first_name, last_name, email, company) VALUES (?) ";
+    var queryString = "INSERT INTO employers (user_id, first_name, last_name, email, company) VALUES (?) ";
  
     connection.query(queryString, [values], function(err, result) {
       if (err) {
@@ -106,7 +106,7 @@ var orm = {
   },
 
   addFreelancer: function(values, callback) {
-    var queryString = "INSERT INTO freelancers (freelancer_id, first_name, last_name, email, phone, photo, rate, bio) VALUES (?) ";
+    var queryString = "INSERT INTO freelancers (user_id, first_name, last_name, email, phone, photo, rate, bio) VALUES (?) ";
  
     connection.query(queryString, [values], function(err, result) {
       if (err) {
@@ -117,7 +117,7 @@ var orm = {
   },
 
   addFreelancerSkill: function(id, skill, callback) {
-    var queryString = "INSERT INTO freelancer_skills (freelancer_id, skill_id) VALUES (?) ";
+    var queryString = "INSERT INTO freelancer_skills (user_id, skill_id) VALUES (?) ";
  
     connection.query(queryString, [id, skill], function(err, result) {
       if (err) {
@@ -185,7 +185,7 @@ var orm = {
 
     updateEmpProfile: function(id, column, value, callback) {
     var queryString = "UPDATE employers SET ? WHERE ?";
-    var params = [ { column: value }, { employer_id: id } ];
+    var params = [ { column: value }, { user_id: id } ];
 
     connection.query(queryString, params, function(err, result) {
       if (err) {
@@ -197,7 +197,7 @@ var orm = {
 
     updateFrlProfile: function(id, column, value, callback) {
     var queryString = "UPDATE freelancers SET ? WHERE ?";
-    var params = [ { column: value }, { freelancer_id: id } ];
+    var params = [ { column: value }, { user_id: id } ];
 
     connection.query(queryString, params, function(err, result) {
       if (err) {
@@ -209,7 +209,7 @@ var orm = {
 
     updateFrlSkill: function(id, skill, value, callback) {
     var queryString = "UPDATE freelancer_skills SET ? WHERE ?";
-    var params = [ { skill_status: value }, { freelancer_id: id } ];
+    var params = [ { skill_status: value }, { user_id: id } ];
 
     connection.query(queryString, params, function(err, result) {
       if (err) {
@@ -342,9 +342,9 @@ var orm = {
 
     findEmployerReviewsByID: function(user_id, callback) {
     var queryString = "SELECT * FROM reviews R "; 
-    queryString += "INNER JOIN employers E ON R.reviewee_id = E.employer_id "; 
-    queryString += "INNER JOIN freelancers F ON F.freelancer_id = R.reviewer_id ";
-    queryString += "WHERE E.employer_id = ? ";
+    queryString += "INNER JOIN employers E ON R.reviewee_id = E.user_id "; 
+    queryString += "INNER JOIN freelancers F ON F.user_id = R.reviewer_id ";
+    queryString += "WHERE E.user_id = ? ";
 
     connection.query(queryString, [user_id], function(err, result) {
       if (err) {
@@ -356,9 +356,9 @@ var orm = {
 
     findFreelancerReviewsByID: function(user_id, callback) {
     var queryString = "SELECT * FROM reviews R "; 
-    queryString += "INNER JOIN freelancers F ON R.reviewee_id = F.freelancer_id "; 
-    queryString += "INNER JOIN employers E ON E.employer_id = R.reviewer_id "; 
-    queryString += "WHERE F.freelancer_id = ? ";
+    queryString += "INNER JOIN freelancers F ON R.reviewee_id = F.user_id "; 
+    queryString += "INNER JOIN employers E ON E.user_id = R.reviewer_id "; 
+    queryString += "WHERE F.user_id = ? ";
 
     connection.query(queryString, [user_id], function(err, result) {
       if (err) {
@@ -370,7 +370,7 @@ var orm = {
 
     findFreelancerBySkill: function(skill, callback) {
     var queryString = "SELECT * FROM freelancers F "; 
-    queryString += "INNER JOIN freelancer_skills FS ON F.freelancer_id = FS.freelancer_id "; 
+    queryString += "INNER JOIN freelancer_skills FS ON F.user_id = FS.user_id "; 
     queryString += "INNER JOIN skill_types ST ON FS.skill_id = ST.type_id "; 
     queryString += "WHERE FS.skill_status = true AND ST.descr = ? ";
 
@@ -384,9 +384,9 @@ var orm = {
 
     getFreelancerSkillsByID: function(user_id, callback) {
     var queryString = "SELECT * FROM freelancers F "; 
-    queryString += "INNER JOIN freelancer_skills FS ON F.freelancer_id = FS.freelancer_id "; 
+    queryString += "INNER JOIN freelancer_skills FS ON F.user_id = FS.user_id "; 
     queryString += "INNER JOIN skill_types ST ON FS.skill_id = ST.type_id "; 
-    queryString += "WHERE FS.skill_status = true AND F.freelancer_id = ? ";
+    queryString += "WHERE FS.skill_status = true AND F.user_id = ? ";
 
     connection.query(queryString, [user_id], function(err, result) {
       if (err) {
