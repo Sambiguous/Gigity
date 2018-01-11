@@ -4,13 +4,17 @@ var fs = require('fs');
 var router = express.Router();
 var PATH = './public/'
 
-// Import the model (freelancers.js) to use its database functions.
+// Import freelancer model to access its orm functions
 var freelancers = require("../models/freelancers.js");
 
 //Create all our routes and set up logic within those routes where required.
+
+//==============================
+//FREELANCER LANDING PAGE ROUTE
+//==============================
 router.get("/", function(req, res) {
     if(req.cookies.type === 'F'){
-        fs.readFile(PATH + "freelancer-view.html", "utf-8", function(err, data){
+        fs.readFile(PATH + 'freelancer-view.html', 'utf-8', function(err, data){
             if(err) throw err;
     
             res.send(data);
@@ -22,9 +26,14 @@ router.get("/", function(req, res) {
     }
 });
 
-// router.post("/:id", function(req, res) {
+//========================
+//FREELANCER SIGNUP ROUTE
+//========================
+router.post("/signup", function(req, res) {
+    
 
-// });
+
+});
 
 // router.put("/", function(req, res) {
 

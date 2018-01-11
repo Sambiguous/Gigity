@@ -17,11 +17,8 @@ router.get("/", function(req, res) {
     });
 });
 
-router.post("/", function(req, res) {
 
-});
-
-router.put("/signup", function(req, res) {
+router.post("/signup", function(req, res) {
 
     employers.createNew(req.body, function(result){
         if(result === "Database Error"){
@@ -40,6 +37,10 @@ router.put("/signup", function(req, res) {
         };
     });
 });
+
+// router.put("/", function(req, res) {
+
+// });
 
 router.delete("/", function(req, res) {
 

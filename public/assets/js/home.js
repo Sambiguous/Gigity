@@ -35,7 +35,7 @@ $(document).ready(function() {
   $('#emp-sign-up').on('click', function(event){
     event.preventDefault();
     $.post({
-      url: '/employers/signup?_method=PUT',
+      url: '/employers/signup',
       data: {
         type: 'E',
         password: "PLACEHOLDER",
@@ -52,6 +52,17 @@ $(document).ready(function() {
       }
     })
   });
+
+  $('#frl-sign-up').on('click', function(event){
+    event.preventDefault();
+    $.post({
+      url: '/freelancers/signup',
+      data: {
+        type: 'F',
+        password()
+      }
+    })
+  })
 });
 
 
