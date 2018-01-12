@@ -11,7 +11,6 @@ var freelancers = require("../models/freelancers.js");
 //Create all our routes and set up logic within those routes where required.
 var currentEmployer;
 router.get("/", function(req, res) {
-    console.log(req.cookies);
 
    employers.selectAll(function(data){
       if(data === "Database Error"){
@@ -33,8 +32,8 @@ router.get("/", function(req, res) {
 
 router.get("/freelancer/:id", function(req, res){
     var id = req.params.id
-freelancers.getData(id,function(data){
-   if(data === "Database Error"){
+    freelancers.getData(id,function(data){
+        if(data === "Database Error"){
             res.send({
                 status: "Internal Database Error"
             });
