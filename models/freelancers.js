@@ -26,6 +26,46 @@ var freelancers = {
 
 
     });
+  }, 
+
+  getData: function(user_id, callback){
+
+    var data = {};
+
+    orm.getFreelancerSkillsByID(user_id,function(result) {
+
+      var skills = [];
+
+      for(i = 0; i < result.length; i++) {
+        skills.push(result[i].descr);
+      }
+
+      data.first_name = result[0].first_name;
+      data.last_name = result[0].last_name;
+      data.skills = skills;
+      data.email = result[0].email;
+      data.rate = result[0].rate;
+      data.photo = result[0].photo;
+
+      });
+
+    orm.findFreelancerReviewsByID(user_id, function(result) {
+
+      var reviews = []; 
+
+      for(i = 0; i < result.length; i++) {
+        var tempObj = {};
+
+        tempObj.employer = result[i].company;
+        tempObj.rating = result[i].rating;
+        tempObj.review = result[i].review;
+
+        reviews.push(tempObj);
+      }
+      
+      data.reviews = reviews;
+      console.log(data);
+    });
   }
 };
 

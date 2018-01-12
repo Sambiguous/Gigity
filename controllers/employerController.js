@@ -19,10 +19,10 @@ router.get("/", function(req, res) {
         }else{
             console.log(data);
             var freelancerBoard = data
-        console.log(freelancerBoard)
-          res.render("../views/freelancer-board.handlebars",{freelancers: freelancerBoard});
+        
+           // console.log(freelancerBoard)
+          res.render("../views/freelancer-board.handlebars",{freelancers:freelancerBoard});
             
-       
         };
     });
 });
