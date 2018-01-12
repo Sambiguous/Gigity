@@ -74,7 +74,10 @@
 	                        <p id="card-occupation">{{#each this.skills}}{{this}}{{/each}}</p>
 	                        <p id="card-rate">${{this.rate}} per Hour</p>
 	                        <br>
-	                        <a href="freelancer-account.html" class="btn btn-large" id="contact-btn"><p>Learn More</p></a>
+	                        <form action="/employers/freelancer/{{this.user_id}}" method="GET">
+	                       
+	                        <button class="btn btn-large" type="submit">Learn More</button>
+	                    </form>
                     	</div>
                 </div>
             </div>

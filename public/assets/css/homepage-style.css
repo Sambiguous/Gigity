@@ -147,6 +147,9 @@ h3 {
     font-weight: bold;
 
 }
+#error{
+color: red;
+}
 
 #contact-modal {
 	margin-top: 0px;

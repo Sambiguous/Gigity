@@ -45,8 +45,13 @@ var employers = {
       callback(res);
    
     });
+  },
+  jobRequest: function(callback) {
+    orm.addJob(employerId,freelancerId,descrip,function(res) {
+      callback(res);
+   
+    });
   }
 };
-
 
 module.exports = employers;
