@@ -11,21 +11,25 @@ var freelancers = require("../models/freelancers.js");
 //Create all our routes and set up logic within those routes where required.
 var currentEmployer;
 router.get("/", function(req, res) {
+    if(req.cookies.type === 'E'){
 
-   employers.selectAll(function(data){
-      if(data === "Database Error"){
-            res.send({
-                status: "Internal Database Error"
-            });
-        }else{
-            console.log(data);
-            var freelancerBoard = data
-        
-           // console.log(freelancerBoard)
-          res.render("../views/freelancer-board.handlebars",{freelancers:freelancerBoard});
+        employers.selectAll(function(data){
+            if(data === "Database Error"){
+                res.send({
+                    status: "Internal Database Error"
+                });
+            }else{
+                console.log(data);
+                var freelancerBoard = data
             
-        };
-    });
+                res.render("../views/freelancer-board.handlebars",{freelancers:freelancerBoard}); 
+            };
+        });
+    } else{
+        res.clearCookie('type');
+        res.clearCookie('id');
+        res.redirect('/')
+    }
 });
 
 
@@ -38,9 +42,7 @@ router.get("/freelancer/:id", function(req, res){
                 status: "Internal Database Error"
             });
         }else{
- 
           res.render("../views/freelancer-account.handlebars", data);
-             //res.redirect("../views/freelancer-account.handlebars");
         };
     });
 });
