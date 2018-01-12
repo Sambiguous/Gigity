@@ -1,4 +1,25 @@
-<div class="profile-photo">	
+<!DOCTYPE html>
+	<html lang="en-us">
+	<head>
+
+	    <title>Your Account</title>
+	    <!-- Materialize stylesheets -->
+	    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+	    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+	    <!-- css -->
+	    <link rel="stylesheet" type="text/css" href="assets/css/homepage-style.css">
+
+	    <!-- Fonts -->
+	    <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Encode+Sans+Expanded" rel="stylesheet">
+
+	    <!-- Firebase -->
+	    <script src="https://www.gstatic.com/firebasejs/4.6.0/firebase.js"></script>
+
+	</head>
+	<body>
+
+
 		<!-- Navigation bar -->
 	  <nav>
 	    <div class="nav-wrapper">
@@ -14,20 +35,21 @@
 	    </div>
 	  </nav>
 
+<div class="background">
+
     <!-- container displays the freelancers profile information and existing reviews -->
-    
 <div class="container profile-reviews">
 	 <div class="row">
 	    <div class="col s12 m7 offset-m2 l7 offset-l2 z-depth-6">
 	      <div class="card profile-card">
 	        <div class="card-image">
-	          <img id="profile-img" src={{this.photo}}>
+	          <img id="profile-img" src="https://static.pexels.com/photos/769746/pexels-photo-769746.jpeg">
 	        </div>
 	        <div class="card-content">
-	        <span class="card-title"><h3>{{this.first_name}} {{this.last_name}}</h3></span>
-	        <span id="card-occupation"><p>{{#each this.skills}}{{this}}{{/each}} | 
-	        <span id="card-rate">${{this.rate}} per hour</p></span>
-	        <p id="email">{{this.email}}</p>
+	        <span class="card-title"><h3>John Doe</h3></span>
+	        <span id="card-occupation"><p>Data Scientist | 
+	        <span id="card-rate">$80 per hour</p></span>
+	        <p id="email">jdoe@gmail.com</p>
 	        <br>
 
 			<!-- card buttons to open modals -->
@@ -43,16 +65,13 @@
 	<div class="row reviews">
 	
 		<div class="col s12 m7 offset-m2 l7 offset-l2 z-depth-6">
-
-	{{#if this.hasreviews}}
 		 <div class="card review-card darken-1">
 	        <div class="card-content">
-	            <span id="employer">{{this.reviews.employer}} </span><span id="rating"> {{this.reviews.rating}}</span>
-	            <p id="review">{{this.reviews.review}}</p>
+	            <span id="employer">Employer </span><span id="rating"> 5/5</span>
+	            <p id="review">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit.</p>
 	        </div>
 	      </div>
 	    </div>
-	{{/if}}
 
 	</div>
 
@@ -101,9 +120,14 @@
 	</div>
 </div>
 
-</div>
-
 	<!-- scripts -->
- 	  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+
+ 	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
     <script src="assets/js/home.js"></script>
+
+</div>
+
+</body>
+
+</html>

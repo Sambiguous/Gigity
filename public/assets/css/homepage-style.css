@@ -1,14 +1,34 @@
 .photo { 
-  background: url(images/pexels-photo-3961582.jpeg) no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+    /* The image used */
+    background-image: url("images/pexels-photo-3961582.jpeg");
+
+    /* Full height */
+    height: 100%; 
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallax-container {
+    max-height: 350px;
+
+        /* The image used */
+    background-image: url("images/pexels-photo.jpg");
+
+    /* Full height */
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 
-body {
-	margin: auto;
+body, html {
+    background: linear-gradient(to bottom right, #565363, #2a2933, #565363, #2a2933);
+    /*background-color: #373541;*/
 }
 
 h1 {
@@ -32,6 +52,7 @@ h3 {
 }
 
 .profile-card {
+	background: #4e4b5a;
 	margin-top: 20px;
 	border-radius: 10px;
 	text-align: center;
@@ -69,18 +90,19 @@ h3 {
 	font-weight: bold;
 }
 
-.btn-large {
+.home-button {
 	width: 100%;
 	margin: 5px;
 	margin-bottom: 10px;
 	background-color: white;
-	opacity: .7;
+	opacity: .8;
 	font-family: 'Encode Sans Expanded', sans-serif;
+	font-size: 18px;
 	color: #282734;
-	font-weight: bold;
+	font-weight: 900;
 }
 
-.btn-large:hover {
+.home-button:hover {
 		background-color: white;
 		opacity: 1;
 }
@@ -93,35 +115,36 @@ h3 {
 
 .review-card {
 	margin-top: -10px;
+	background: #4e4b5a;
 	font-family: 'Encode Sans Expanded', sans-serif;
-	color: grey;
+	color: white;
 	text-align: left;
 }
 
 #contact-btn {
-	margin-top: 10px;
 	margin-bottom: -6px;
-	opacity: .85;
-	background-color: #282735;
-	font-family: 'Encode Sans Expanded', sans-serif;
-	color: white;
+	width: 100%;	
+	background: transparent;
+	outline-style: solid;
+    outline-color: white;
+    outline-width: 1px;
+    font-size: 16px;
 }
 
 #contact-btn:hover {
-	margin-top: 5;
 	margin-bottom: -6px;
-	opacity: 1;
-	background-color: #282735;
-	font-family: 'Encode Sans Expanded', sans-serif;
-	color: white;
+	outline-style: solid;
+    outline-color: white;
+    outline-width: 1px;
+	background-color: white;
+	color: #373541;
 }
 
-.parallax-container {
-    max-height: 350px;
-}
 
 .card-title{
     margin-top: -10px;
+    font-weight: bold;
+
 }
 
 #contact-modal {
@@ -134,26 +157,59 @@ h3 {
     margin-right: auto
 }
 
+.card-content {
+	font-family: 'Encode Sans Expanded', sans-serif;
+	color: white;
+
+}
+
+.nav-wrapper {
+	font-family: 'Encode Sans Expanded', sans-serif;
+	color: #282734;
+}
+
 #buttons {
-	margin-top: 10px;
+	margin-top: 20px;
 	width: 80%;
 	margin-bottom: 0px;
 }
 
+.board-buttons{
 
-.card-btn {
-	width: 100%;
-	margin: 10px;
 	background-color: white;
-	opacity: .6;
+	opacity: .8;
 	font-family: 'Encode Sans Expanded', sans-serif;
 	color: #282734;
-	font-weight: bold;
+	font-weight: 900;
+}
+
+.board-buttons:hover {
+	background-color: white;
+	opacity: 1;
+	font-family: 'Encode Sans Expanded', sans-serif;
+	color: #373541;
+	font-weight: 900;
+}
+
+
+.card-btn {
+	width: 100%;	
+	margin: 5px;
+	background: transparent;
+	outline-style: solid;
+    outline-color: white;
+    outline-width: 1px;
+    font-size: 16px;
+	
 }
 
 .card-btn:hover {
-		background-color: white;
-		opacity: 1;
+	outline-style: solid;
+    outline-color: white;
+    outline-width: 1px;
+	background-color: white;
+	color: #373541;
+
 }
 
 
@@ -187,7 +243,6 @@ h3 {
     }
 
     #buttons {
-	margin-top: 20px;
 	width: 100%;
 	margin-bottom: 0px;
 	}

@@ -1,4 +1,28 @@
- <nav>
+<!DOCTYPE html>
+	<html lang="en-us">
+	<head>
+
+	    <title>Find a Freelancer</title>
+	    <!-- Materialize stylesheets -->
+	    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+	    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+	    <!-- css -->
+	    <link rel="stylesheet" type="text/css" href="assets/css/homepage-style.css">
+
+	    <!-- Fonts -->
+	    <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Encode+Sans+Expanded" rel="stylesheet">
+
+	    <!-- Firebase -->
+	    <script src="https://www.gstatic.com/firebasejs/4.6.0/firebase.js"></script>
+
+	</head>
+	<body>
+
+
+		<!-- Navigation bar -->
+	  
+	  <nav>
 	    <div class="nav-wrapper">
 		    <a href="home.html">
 		      <img src="assets/css/images/black-logo.png" class="brand-logo"></a>
@@ -15,11 +39,11 @@
 		<!-- <h2>Find a Freelancer</h2> -->
 
 		<div class="parallax-container">
-      		<div class="parallax"><img src="assets/css/images/pexels-photo.jpg"></div>
+      		<div class="parallax"></div>
       		<h1>BROWSE OUR TOP TALENT</h1>
     	</div>
 					
-
+<div class="background">
 
 	<form action="#">
 
@@ -56,34 +80,28 @@
     <!-- dynamic cards to display the freelancers information -->
 
 <div class="row center-align" id="cards">
-			
-
-				{{#each this.freelancers}}
-
             <div class="col s12 m4 l3">
                 <div class="card profile-card">
                     <div class="card-image">
-                        <img id="card-img" src={{this.photo}}>
+                        <img id="card-img" src="https://static.pexels.com/photos/769746/pexels-photo-769746.jpeg">
                         <span class="card-title"></span>
-						</div>
+
 						<!-- this needs to go to the employer mail form -->
 
-	                    
-	                    <div class="card-content">
-	                    	<span class="card-title">{{this.first_name}} {{this.last_name}}</span>
-	                        <p id="card-occupation">{{#each this.skills}}{{this}}{{/each}}</p>
-	                        <p id="card-rate">${{this.rate}} per Hour</p>
-	                        <br>
-	                        <a href="freelancer-account.html" class="btn btn-large" id="contact-btn"><p>Learn More</p></a>
-                    	</div>
+                     
+                    </div>
+                    <div class="card-content">
+                    	<span class="card-title">John Doe</span>
+                        <p id="card-occupation">Data Scientist</p>
+                        <p id="card-rate">$80 per Hour</p>
+                        <br>
+                        <a href="freelancer-account.html" class="btn btn-large" id="contact-btn"><p>Contact</p></a>
+                    </div>
                 </div>
             </div>
-
-				{{/each}}
         </div>
 
 </div>
-
 
 
 	<!-- scripts -->
@@ -92,3 +110,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
 
     <script src="assets/js/home.js"></script>
+</div>
+
+</body>
+
+</html>
