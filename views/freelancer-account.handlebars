@@ -151,52 +151,11 @@
     startingTop: '4%', // Starting top style attribute
     endingTop: '10%', // Ending top style attribute
   });
-  $('#contact').on("click", function(event){
-    event.preventDefault();
-    console.log("cmon");
-    $("#review-modal").hide();
-    $("#contact-modal").show();
-    
-  });
-  $('#close-contact').on("click", function(event){
-    event.preventDefault();
-    console.log("cmon");
-    
-    $("#contact-modal").hide();
-    $("#name").val() = "";
-    $("#email").val() = "";
-    $("#message").val() = "";
- //   $("#contact-modal").empty();
-    
-  });
-  $('#close-review').on("click", function(event){
-    event.preventDefault();
-    console.log("cmon");
-    
-    $("#review-modal").hide();
-    $("#name").val() = "";
-    $("#rating").val() = "";
-    $("#review").val() = "";
- //   $("#contact-modal").empty();
-    
-  });
-  $('#review').on("click", function(event){
-    event.preventDefault();
-    console.log("cmon");
-    $("#contact-modal").hide();
-    $("#review-modal").show();
-  });
+
    $('#send-contact').on("click", function(event){
     event.preventDefault();
     
-    var contactInfo = {
-      name:  $("#name").val(),
-      email: $("#emaill").val(),
-      message: $("#message").val()
-    }
-
-console.log(contactInfo);
-    $("#contact-modal").hide(3);
+  
   
   $.post({
       url: '/freelancer/messages/'+this.user_id,
