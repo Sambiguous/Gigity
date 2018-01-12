@@ -21,7 +21,6 @@ router.get("/", function(req, res) {
     } else{ //if no cookies are found, send user to homepage
         console.log('index.js: else statement in homepage route');
         res.render('../views/index.handlebars', {})
-        
     };
 });
 
@@ -43,25 +42,15 @@ router.post("/login", function(req, res){
                 res.send({
                     status: "success",
                     url: url
-                })
+                });
             } else{
                 res.send("login failed");
-            }
+            };
         } else{
             res.send("login failed");
-        }      
+        };    
     });
 });
-
-// router.put("/", function(req, res) {
-
-// });
-
-// router.delete("/", function(req, res) {
-
-// });
-
-// Export routes for server.js to use.
 
 
 module.exports = router;

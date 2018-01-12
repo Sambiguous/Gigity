@@ -40,6 +40,12 @@ var employers = {
     orm.selectAll("freelancers",function(res) {
       callback(res);
     });
+  },
+  jobRequest: function(callback) {
+    orm.addJob(employerId,freelancerId,descrip,function(res) {
+      callback(res);
+   
+    });
   }
 };
 

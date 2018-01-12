@@ -41,6 +41,11 @@ $(document).ready(function() {
     });
   });
 
+  $('#contact-freelancer').on("click", function(event){
+    event.preventDefault();
+    console.log("cmon");
+  });
+
   $('#emp-sign-up').on('click', function(event){
     event.preventDefault();
     $.post({
@@ -62,6 +67,25 @@ $(document).ready(function() {
       }
     })
   });
+
+  /*
+  $("#contact-btn").on('click',function(event){
+    event.preventDefault();
+      var id = this.user_id;
+      console.log(id);
+      $.get("/freelancer/" + id, function(data) {
+          if(!data){
+        console.log("fuckkk")
+        }
+     });
+  });
+*/
+ $("#contact-btn").on('click',function(event){
+    event.preventDefault();
+      var id = this.last_name;
+      console.log(id);
+  
+     });
 
   $('#frl-sign-up').on('click', function(event){
     event.preventDefault();
