@@ -86,6 +86,7 @@ $(document).ready(function() {
       console.log(id);
   
      });
+ 
 
   $('#frl-sign-up').on('click', function(event){
     event.preventDefault();
