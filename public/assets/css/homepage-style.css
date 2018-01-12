@@ -3,7 +3,7 @@
     background-image: url("images/pexels-photo-3961582.jpeg");
 
     /* Full height */
-    height: 100%; 
+    height: 100%;
 
     /* Center and scale the image nicely */
     background-position: center;
@@ -29,6 +29,7 @@
 body, html {
     background: linear-gradient(to bottom right, #565363, #2a2933, #565363, #2a2933);
     /*background-color: #373541;*/
+    height: 100%;
 }
 
 h1 {
