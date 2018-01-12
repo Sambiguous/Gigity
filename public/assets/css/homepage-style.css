@@ -1,4 +1,4 @@
-html { 
+.photo { 
   background: url(images/pexels-photo-3961582.jpeg) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -12,16 +12,34 @@ body {
 }
 
 h1 {
-	font-size: 40px;
+	font-family: 'Fjalla One', sans-serif;
+	color: white;
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 50px;
+	margin-top: 150px;
+	text-shadow: 1px 1px 8px #696969;
 }
 
 h2 {
 	font-size: 30px;
 }
 
+h3 {
+	font-size: 25px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+.profile-card {
+	margin-top: 20px;
+	border-radius: 10px;
+	text-align: center;
+	font-family: 'Encode Sans Expanded', sans-serif;
+}
 
 #profile-img {
-	width: 40%;
+	width: 100%;
 	align-items: center;
 }
 
@@ -45,6 +63,12 @@ h2 {
 	color: grey;
 }
 
+#employer {
+	font-size: 20px;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
 .btn-large {
 	width: 100%;
 	margin: 5px;
@@ -61,14 +85,59 @@ h2 {
 		opacity: 1;
 }
 
-.card {
-	width: 50%;
-}
-
 .error-msg {
     font-family: 'Encode Sans Expanded', sans-serif;
     font-size: 13px;
     color: red;
+}
+
+.review-card {
+	margin-top: -10px;
+	font-family: 'Encode Sans Expanded', sans-serif;
+	color: grey;
+	text-align: left;
+}
+
+#contact-btn {
+	margin-top: 10px;
+	margin-bottom: -6px;
+	opacity: .85;
+	background-color: #282735;
+	font-family: 'Encode Sans Expanded', sans-serif;
+	color: white;
+}
+
+#contact-btn:hover {
+	margin-top: 5;
+	margin-bottom: -6px;
+	opacity: 1;
+	background-color: #282735;
+	font-family: 'Encode Sans Expanded', sans-serif;
+	color: white;
+}
+
+.parallax-container {
+    max-height: 350px;
+}
+
+.card-title{
+    margin-top: -10px;
+}
+
+#contact-modal {
+	margin-top: 0px;
+}
+
+.container {
+	display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
+#buttons {
+	margin-top: 10px;
+	width: 80%;
+	margin-bottom: 0px;
 }
 
 
@@ -90,15 +159,21 @@ h2 {
     	margin: 0 auto;
     	width: 80%;
     }
-    .home-buttons {
+    .homepage-buttons {
 		margin-top: 20%;
     }
 
-    .btn-large {
+    .home-button {
     	display: block;
     	margin: 0 auto;
     	margin-bottom: 10px;
     	width: 80%;
     }
+
+    #buttons {
+	margin-top: 20px;
+	width: 100%;
+	margin-bottom: 0px;
+	}
 }
 
