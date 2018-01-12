@@ -1,4 +1,4 @@
-	
+<div class="profile-photo">	
 		<!-- Navigation bar -->
 	  <nav>
 	    <div class="nav-wrapper">
@@ -28,12 +28,12 @@
 	        <span id="card-occupation"><p>{{#each this.skills}}{{this}}{{/each}} | 
 	        <span id="card-rate">${{this.rate}} per hour</p></span>
 	        <p id="email">{{this.email}}</p>
-	        </div>
+	        <br>
 
 			<!-- card buttons to open modals -->
 
 		 	<div class="review"><a class="btn modal-trigger waves-effect waves-light card-btn btn-large" data-target="review-modal" href="#review-modal">Review an Employer</a></div>
-
+			</div>
 	      </div>
 	    </div>
 	  </div>
@@ -53,9 +53,7 @@
 	      </div>
 	    </div>
 	{{/if}}
-
 	</div>
-
 </div>
 
   <!-- review modal -->
@@ -101,7 +99,9 @@
 	</div>
 </div>
 
+</div>
+
 	<!-- scripts -->
- 	  {{!-- <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+ 	  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
-    <script src="assets/js/home.js"></script> --}}
+    <script src="assets/js/home.js"></script>

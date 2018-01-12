@@ -13,27 +13,16 @@ router.use('/employers', require('./employerController'))
 
 //HOMEPAGE ROUTE
 router.get("/", function(req, res) {
-    //if(req.cookies.type){ //if cookies are found, send user to relevant landing page
-        //let url = req.cookies.type === 'F' ? '/freelancers' : '/employers';
+    if(req.cookies.type){ //if cookies are found, send user to relevant landing page
+        let url = req.cookies.type === 'F' ? '/freelancers' : '/employers';
+        console.log('index.js: cookies found, redirecting to:', url);
+        res.redirect(url);
 
-        //res.redirect(url);
-
-    //} else{ //if no cookies are found, send user to homepage
-        // fs.readFile(PATH + 'home.html', 'utf-8', function(err, data){
-        //     if(err) throw err;
-        //     res.send(data)
-        // });
-        res.render('../views/index.handlebars', {
-            first_name: "test",
-            last_name: "test",
-            skills: ["skill1", "skill2"],
-            rate: 45.00,
-            email: "email@email",
-            photo: 'https://static.pexels.com/photos/324658/pexels-photo-324658.jpeg',
-            reviews: [{review: "text"}, {review: "text"}]
-        })
+    } else{ //if no cookies are found, send user to homepage
+        console.log('index.js: else statement in homepage route');
+        res.render('../views/index.handlebars', {})
         
-    //};
+    };
 });
 
 //LOGIN ROUTE

@@ -7,23 +7,31 @@ var PATH = './public/'
 // Import freelancer model to access its orm functions
 var freelancers = require("../models/freelancers.js");
 
-//Create all our routes and set up logic within those routes where required.
 
 //==============================
 //FREELANCER LANDING PAGE ROUTE
 //==============================
 router.get("/", function(req, res) {
+
     if(req.cookies.type === 'F'){
-        res.render('../views/freelancer-view.handlebars', {
-            first_name: "test",
-            last_name: "test",
-            skills: ["skill1", "skill2"],
-            rate: 45.00,
-            email: "email@email",
-            photo: 'https://static.pexels.com/photos/324658/pexels-photo-324658.jpeg',
-            hasReviews: true,
-            reviews: [{review: "text"}, {review: "text"}]
+        console.log('freelancercontroller.js: cookies found. querying database with id:', req.cookies.id);
+
+        freelancers.getData(req.cookies.id, function(result){
+            console.log('successful response from database:', result);
+
+            res.render('../views/freelancer-view.handlebars', result)
         });
+
+        // res.render('../views/freelancer-view.handlebars', {
+        //     first_name: "test",
+        //     last_name: "test",
+        //     skills: ["skill1", "skill2"],
+        //     rate: 45.00,
+        //     email: "email@email",
+        //     photo: 'https://static.pexels.com/photos/324658/pexels-photo-324658.jpeg',
+        //     hasReviews: true,
+        //     reviews: [{review: "text"}, {review: "text"}]
+        // });
 
      } else{
         res.clearCookie('type');

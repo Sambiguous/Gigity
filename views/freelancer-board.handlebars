@@ -25,13 +25,13 @@
 
     	<div class="row center-align" id="buttons">
 
-		 <div class="col l3 m6 s6"><a class="btn waves-effect waves-light btn-large" id="display-frontend">Front End Developer</a></div>
+		 <div class="col l3 m6 s6"><a class="board-buttons btn waves-effect waves-light btn-large" id="display-frontend">Front End Developer</a></div>
 
-		 <div class="col l3 m6 s6"><a class="btn waves-effect waves-light btn-large" id="display-backend">Back End Developer</a></div>
+		 <div class="col l3 m6 s6"><a class="board-buttons btn waves-effect waves-light btn-large" id="display-backend">Back End Developer</a></div>
 
-		 <div class="col l3 m6 s6"><a class="btn waves-effect waves-light btn-large" id="display-data">Data Scientist</a></div>
+		 <div class="col l3 m6 s6"><a class="board-buttons btn waves-effect waves-light btn-large" id="display-data">Data Scientist</a></div>
 
-		 <div class="col l3 m6 s6"><a class="btn waves-effect waves-light btn-large" id="display-it">IT</a></div>
+		 <div class="col l3 m6 s6"><a class="board-buttons btn waves-effect waves-light btn-large" id="display-it">IT</a></div>
 
 	</div>
 
@@ -73,6 +73,7 @@
 	                    	<span class="card-title">{{this.first_name}} {{this.last_name}}</span>
 	                        <p id="card-occupation">{{#each this.skills}}{{this}}{{/each}}</p>
 	                        <p id="card-rate">${{this.rate}} per Hour</p>
+	                        <br>
 	                        <a href="freelancer-account.html" class="btn btn-large" id="contact-btn"><p>Learn More</p></a>
                     	</div>
                 </div>

@@ -17,20 +17,19 @@ INSERT INTO users (user_email, user_password, user_type) VALUES ('mary.marbles@y
 INSERT INTO users (user_email, user_password, user_type) VALUES ('I.M.Oldman@geocities.com', 'Flashback', 'F');
 INSERT INTO users (user_email, user_password, user_type) VALUES ('s-snowflake@snowblower.com', 'BringingJoy2', 'E');
 INSERT INTO users (user_email, user_password, user_type) VALUES ('George@vandelay.com', 'FestivusNow', 'E');
-INSERT INTO users (user_email, user_password, user_type) VALUES ('kadams@gmail.com', 'TEST7', 'E');
-INSERT INTO users (user_email, user_password, user_type) VALUES ('reginap@gmail.com', 'TEST8', 'E');
-INSERT INTO users (user_email, user_password, user_type) VALUES ('bwyatt@cityofpawnee.com', 'TEST9', 'E');
-INSERT INTO users (user_email, user_password, user_type) VALUES ('wtruman@yahoo.com', 'TEST10', 'E');
-INSERT INTO users (user_email, user_password, user_type) VALUES ('cday@hotmail.com', 'sunny11', 'E');
-INSERT INTO users (user_email, user_password, user_type) VALUES ('mrichards@gmail.com', 'newman12', 'E');
-INSERT INTO users (user_email, user_password, user_type) VALUES ('dee@iasip.com', 'TEST13', 'E');
-INSERT INTO users (user_email, user_password, user_type) VALUES ('justjack@gmail.com', 'TEST14', 'E');
-INSERT INTO users (user_email, user_password, user_type) VALUES ('lknope@cityofpawnee.com', 'TEST15', 'E');
-INSERT INTO users (user_email, user_password, user_type) VALUES ('gob@bluthsbananas.com', 'magic16', 'E');
-INSERT INTO users (user_email, user_password, user_type) VALUES ('rachel@gmail.com', 'TEST17', 'E');
-INSERT INTO users (user_email, user_password, user_type) VALUES ('giggity@gmail.com', 'lois4ever', 'E');
-INSERT INTO users (user_email, user_password, user_type) VALUES ('cyork@nyc.com', 'TEST19', 'E');
-
+INSERT INTO users (user_email, user_password, user_type) VALUES ('kadams@gmail.com', 'pass', 'F');
+INSERT INTO users (user_email, user_password, user_type) VALUES ('reginap@gmail.com', 'pass', 'F');
+INSERT INTO users (user_email, user_password, user_type) VALUES ('bwyatt@cityofpawnee.com', 'pass', 'F');
+INSERT INTO users (user_email, user_password, user_type) VALUES ('wtruman@yahoo.com', 'pass', 'F');
+INSERT INTO users (user_email, user_password, user_type) VALUES ('cday@hotmail.com', 'pass', 'F');
+INSERT INTO users (user_email, user_password, user_type) VALUES ('mrichards@gmail.com', 'pass', 'F');
+INSERT INTO users (user_email, user_password, user_type) VALUES ('dee@iasip.com', 'pass', 'F');
+INSERT INTO users (user_email, user_password, user_type) VALUES ('justjack@gmail.com', 'pass', 'F');
+INSERT INTO users (user_email, user_password, user_type) VALUES ('lknope@cityofpawnee.com', 'pass', 'F');
+INSERT INTO users (user_email, user_password, user_type) VALUES ('gob@bluthsbananas.com', 'pass', 'F');
+INSERT INTO users (user_email, user_password, user_type) VALUES ('rachel@gmail.com', 'pass', 'F');
+INSERT INTO users (user_email, user_password, user_type) VALUES ('giggity@gmail.com', 'pass', 'F');
+INSERT INTO users (user_email, user_password, user_type) VALUES ('cyork@nyc.com', 'pass', 'F');
 
 
 INSERT INTO freelancers (user_id, first_name, last_name, email, photo, rate, bio) VALUES (1, 'John', 'Doe', 'john@f-society.com', 'https://static.pexels.com/photos/92129/pexels-photo-92129.jpeg', 75.00, 'Able to blend in seamlessly to any office environment');
@@ -42,7 +41,7 @@ INSERT INTO freelancers (user_id, first_name, last_name, email, photo, rate, bio
 INSERT INTO freelancers (user_id, first_name, last_name, email, photo, rate, bio) VALUES (10, 'Will', 'Truman', 'wtruman@yahoo.com', 'https://static.pexels.com/photos/375880/pexels-photo-375880.jpeg', 50.00, '');
 INSERT INTO freelancers (user_id, first_name, last_name, email, photo, rate, bio) VALUES (11, 'Charlie', 'Day', 'cday@hotmail.com', 'https://static.pexels.com/photos/91227/pexels-photo-91227.jpeg', 90.00, '');
 INSERT INTO freelancers (user_id, first_name, last_name, email, photo, rate, bio) VALUES (12, 'Cosmo', 'Kramer', 'mrichards@gmail.com', 'https://static.pexels.com/photos/428341/pexels-photo-428341.jpeg', 45.00, '');
-INSERT INTO freelancers (user_id, first_name, last_name, email, photo, rate, bio) VALUES (13, 'Dee', 'Reynolds', 'dee@iasip.com', 'https://www.pexels.com/photo/attractive-beautiful-beauty-cute-539727/', 50.00, '');
+INSERT INTO freelancers (user_id, first_name, last_name, email, photo, rate, bio) VALUES (13, 'Dee', 'Reynolds', 'dee@iasip.com', 'https://www.pexels.com/photo/attractive-beautiful-beauty-cute-539727', 50.00, '');
 INSERT INTO freelancers (user_id, first_name, last_name, email, photo, rate, bio) VALUES (14, 'Jack', 'McFarland', 'justjack@gmail.com', 'https://static.pexels.com/photos/724889/pexels-photo-724889.png', 75.00, '');
 INSERT INTO freelancers (user_id, first_name, last_name, email, photo, rate, bio) VALUES (15, 'Leslie', 'Knope', 'lknope@cityofpawnee.com', 'https://static.pexels.com/photos/407237/pexels-photo-407237.jpeg', 80.00, '');
 INSERT INTO freelancers (user_id, first_name, last_name, email, photo, rate, bio) VALUES (16, 'Gob', 'Bluth', 'gob@bluthsbananas.com', 'https://static.pexels.com/photos/462680/pexels-photo-462680.jpeg', 120.00, '');
@@ -72,15 +71,13 @@ INSERT INTO freelancer_skills (user_id, skill_id) VALUES (11, 3);
 INSERT INTO freelancer_skills (user_id, skill_id) VALUES (12, 4);
 INSERT INTO freelancer_skills (user_id, skill_id) VALUES (13, 2);
 INSERT INTO freelancer_skills (user_id, skill_id) VALUES (14, 3);
-INSERT INTO freelancer_skills (user_id, skill_id) VALUES (15, 2);
 INSERT INTO freelancer_skills (user_id, skill_id) VALUES (15, 1);
+INSERT INTO freelancer_skills (user_id, skill_id) VALUES (15, 2);
 INSERT INTO freelancer_skills (user_id, skill_id) VALUES (16, 1);
 INSERT INTO freelancer_skills (user_id, skill_id) VALUES (17, 4);
 INSERT INTO freelancer_skills (user_id, skill_id) VALUES (18, 3);
 INSERT INTO freelancer_skills (user_id, skill_id) VALUES (18, 4);
 INSERT INTO freelancer_skills (user_id, skill_id) VALUES (19, 2);
-
-
 
 INSERT INTO jobs (employer_id, freelancer_id, job_descr, job_status) VALUES (2, 1, 'Create storefront for dark web sales', 4);
 INSERT INTO jobs (employer_id, job_descr) VALUES (2, 'Create email template');

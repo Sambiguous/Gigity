@@ -64,7 +64,7 @@ var freelancers = {
       }
       
       data.reviews = reviews;
-      console.log(data);
+      callback(data);
     });
   }
 };
