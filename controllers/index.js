@@ -28,7 +28,7 @@ router.get("/", function(req, res) {
 router.get('/logout', function(req, res){
     res.clearCookie('type');
     res.clearCookie('id');
-    res.render('../views/index.handlebars', {});
+    res.redirect('/');
 })
 
 //LOGIN ROUTE
