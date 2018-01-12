@@ -43,9 +43,13 @@
 	<div class="row reviews">
 	
 		<div class="col s12 m7 offset-m2 l7 offset-l2 z-depth-6">
+
+	{{#if this.hasreviews}}
+
 		 <div class="card review-card darken-1">
+	
 	        <div class="card-content">
-	            <span id="employer">{{this.reviews.employer}} </span><span id="rating"> {{this.reviews.rating}}/5</span>
+	            <span id="employer">{{this.reviews.employer}} </span><span id="rating"> {{this.reviews.rating}}</span>
 	            <p id="review">{{this.reviews.review}}</p>
 	        </div>
 	      </div>

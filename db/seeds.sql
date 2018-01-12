@@ -24,6 +24,16 @@ INSERT INTO freelancers (user_id, first_name, last_name, email, photo, rate, bio
 INSERT INTO freelancers (user_id, first_name, last_name, email, photo, rate, bio) VALUES (7, 'Ken', 'Adams', 'kadams@gmail.com', 'https://static.pexels.com/photos/428339/pexels-photo-428339.jpeg', 60.00, '');
 INSERT INTO freelancers (user_id, first_name, last_name, email, photo, rate, bio) VALUES (8, 'Regina', 'Phalange', 'reginap@gmail.com', 'https://static.pexels.com/photos/206445/pexels-photo-206445.jpeg', 100.00, '');
 INSERT INTO freelancers (user_id, first_name, last_name, email, photo, rate, bio) VALUES (9, 'Ben', 'Wyatt', 'bwyatt@cityofpawnee.com', 'https://static.pexels.com/photos/450214/pexels-photo-450214.jpeg', 75.00, '');
+INSERT INTO freelancers (user_id, first_name, last_name, email, photo, rate, bio) VALUES (10, 'Will', 'Truman', 'wtruman@yahoo.com', 'https://static.pexels.com/photos/375880/pexels-photo-375880.jpeg', 50.00, '');
+INSERT INTO freelancers (user_id, first_name, last_name, email, photo, rate, bio) VALUES (11, 'Charlie', 'Day', 'cday@hotmail.com', 'https://static.pexels.com/photos/91227/pexels-photo-91227.jpeg', 90.00, '');
+INSERT INTO freelancers (user_id, first_name, last_name, email, photo, rate, bio) VALUES (12, 'Cosmo', 'Kramer', 'mrichards@gmail.com', 'https://static.pexels.com/photos/428341/pexels-photo-428341.jpeg', 45.00, '');
+INSERT INTO freelancers (user_id, first_name, last_name, email, photo, rate, bio) VALUES (13, 'Dee', 'Reynolds', 'dee@iasip.com', 'https://www.pexels.com/photo/attractive-beautiful-beauty-cute-539727/', 50.00, '');
+INSERT INTO freelancers (user_id, first_name, last_name, email, photo, rate, bio) VALUES (14, 'Jack', 'McFarland', 'justjack@gmail.com', 'https://static.pexels.com/photos/724889/pexels-photo-724889.png', 75.00, '');
+INSERT INTO freelancers (user_id, first_name, last_name, email, photo, rate, bio) VALUES (15, 'Leslie', 'Knope', 'lknope@cityofpawnee.com', 'https://static.pexels.com/photos/407237/pexels-photo-407237.jpeg', 80.00, '');
+INSERT INTO freelancers (user_id, first_name, last_name, email, photo, rate, bio) VALUES (16, 'Gob', 'Bluth', 'gob@bluthsbananas.com', 'https://static.pexels.com/photos/462680/pexels-photo-462680.jpeg', 120.00, '');
+INSERT INTO freelancers (user_id, first_name, last_name, email, photo, rate, bio) VALUES (17, 'Rachel', 'Green', 'rachel@gmail.com', 'https://static.pexels.com/photos/295564/pexels-photo-295564.jpeg', 65.00, '');
+INSERT INTO freelancers (user_id, first_name, last_name, email, photo, rate, bio) VALUES (18, 'Glenn', 'Quagmire', 'giggity@gmail.com', 'https://static.pexels.com/photos/7066/man-relax-couch-study.jpg', 75.00, '');
+INSERT INTO freelancers (user_id, first_name, last_name, email, photo, rate, bio) VALUES (19, 'Charlotte', 'York', 'cyork@nyc.com', 'https://static.pexels.com/photos/253758/pexels-photo-253758.jpeg', 80.00, '');
 
 
 INSERT INTO employers (user_id, first_name, last_name, email, company) VALUES (2, 'Jeff', 'Smith', 'j.smith@widgets.com', 'Widgets R Us');
@@ -42,6 +52,19 @@ INSERT INTO freelancer_skills (user_id, skill_id) VALUES (7, 4);
 INSERT INTO freelancer_skills (user_id, skill_id) VALUES (8, 2);
 INSERT INTO freelancer_skills (user_id, skill_id) VALUES (9, 2);
 INSERT INTO freelancer_skills (user_id, skill_id) VALUES (9, 3);
+INSERT INTO freelancer_skills (user_id, skill_id) VALUES (10, 1);
+INSERT INTO freelancer_skills (user_id, skill_id) VALUES (11, 3);
+INSERT INTO freelancer_skills (user_id, skill_id) VALUES (12, 4);
+INSERT INTO freelancer_skills (user_id, skill_id) VALUES (13, 2);
+INSERT INTO freelancer_skills (user_id, skill_id) VALUES (14, 3);
+INSERT INTO freelancer_skills (user_id, skill_id) VALUES (15, 2);
+INSERT INTO freelancer_skills (user_id, skill_id) VALUES (15, 1);
+INSERT INTO freelancer_skills (user_id, skill_id) VALUES (16, 1);
+INSERT INTO freelancer_skills (user_id, skill_id) VALUES (17, 4);
+INSERT INTO freelancer_skills (user_id, skill_id) VALUES (18, 3);
+INSERT INTO freelancer_skills (user_id, skill_id) VALUES (18, 4);
+INSERT INTO freelancer_skills (user_id, skill_id) VALUES (19, 2);
+
 
 
 INSERT INTO jobs (employer_id, freelancer_id, job_descr, job_status) VALUES (2, 1, 'Create storefront for dark web sales', 4);
