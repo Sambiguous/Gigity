@@ -1,10 +1,8 @@
 // Import the ORM to create functions that will interact with the database.
 var orm = require("./orm.js");
 
-
-
 var employers = {
-  //employers specific functions go here
+
   createNew: function(requestData, callback){
     let userTableData = {
       user_email: requestData.email,
@@ -36,17 +34,13 @@ var employers = {
         }
         callback(responseToController);
       });
-    
-
     });
   },
   selectAll: function(callback) {
     orm.selectAll("freelancers",function(res) {
       callback(res);
-   
     });
   }
 };
-
 
 module.exports = employers;

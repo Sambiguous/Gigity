@@ -12,32 +12,19 @@ var freelancers = require("../models/freelancers.js");
 //FREELANCER LANDING PAGE ROUTE
 //==============================
 router.get("/", function(req, res) {
-
-    if(req.cookies.type === 'F'){
-        console.log('freelancercontroller.js: cookies found. querying database with id:', req.cookies.id);
+    
+    if(req.cookies.type === 'F'){//ensure user has appropriate cookies
 
         freelancers.getData(req.cookies.id, function(result){
-            console.log('successful response from database:', result);
 
             res.render('../views/freelancer-view.handlebars', result)
         });
 
-        // res.render('../views/freelancer-view.handlebars', {
-        //     first_name: "test",
-        //     last_name: "test",
-        //     skills: ["skill1", "skill2"],
-        //     rate: 45.00,
-        //     email: "email@email",
-        //     photo: 'https://static.pexels.com/photos/324658/pexels-photo-324658.jpeg',
-        //     hasReviews: true,
-        //     reviews: [{review: "text"}, {review: "text"}]
-        // });
-
-     } else{
+     } else{//if invalid or no cookies are found, clear any cookies and redirect user to homepage.
         res.clearCookie('type');
         res.clearCookie('id');
         res.redirect('/')
-    } 
+    };
 });
 
 //=========================
@@ -63,14 +50,6 @@ router.post("/signup", function(req, res) {
         });
     });
 });
-
-// router.put("/", function(req, res) {
-
-// });
-
-// router.delete("/", function(req, res) {
-
-// });
 
 // Export routes for server.js to use.
 module.exports = router;
