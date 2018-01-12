@@ -81,8 +81,6 @@ $(document).ready(function() {
       }
     });
 
-
-
     if(isNaN(parseFloat($('#rate').val()))){
       //error code goes here
     } else {

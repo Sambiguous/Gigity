@@ -17,6 +17,19 @@ INSERT INTO users (user_email, user_password, user_type) VALUES ('mary.marbles@y
 INSERT INTO users (user_email, user_password, user_type) VALUES ('I.M.Oldman@geocities.com', 'Flashback', 'F');
 INSERT INTO users (user_email, user_password, user_type) VALUES ('s-snowflake@snowblower.com', 'BringingJoy2', 'E');
 INSERT INTO users (user_email, user_password, user_type) VALUES ('George@vandelay.com', 'FestivusNow', 'E');
+INSERT INTO users (user_email, user_password, user_type) VALUES ('kadams@gmail.com', 'pass', 'F');
+INSERT INTO users (user_email, user_password, user_type) VALUES ('reginap@gmail.com', 'pass', 'F');
+INSERT INTO users (user_email, user_password, user_type) VALUES ('bwyatt@cityofpawnee.com', 'pass', 'F');
+INSERT INTO users (user_email, user_password, user_type) VALUES ('wtruman@yahoo.com', 'pass', 'F');
+INSERT INTO users (user_email, user_password, user_type) VALUES ('cday@hotmail.com', 'pass', 'F');
+INSERT INTO users (user_email, user_password, user_type) VALUES ('mrichards@gmail.com', 'pass', 'F');
+INSERT INTO users (user_email, user_password, user_type) VALUES ('dee@iasip.com', 'pass', 'F');
+INSERT INTO users (user_email, user_password, user_type) VALUES ('justjack@gmail.com', 'pass', 'F');
+INSERT INTO users (user_email, user_password, user_type) VALUES ('lknope@cityofpawnee.com', 'pass', 'F');
+INSERT INTO users (user_email, user_password, user_type) VALUES ('gob@bluthsbananas.com', 'pass', 'F');
+INSERT INTO users (user_email, user_password, user_type) VALUES ('rachel@gmail.com', 'pass', 'F');
+INSERT INTO users (user_email, user_password, user_type) VALUES ('giggity@gmail.com', 'pass', 'F');
+INSERT INTO users (user_email, user_password, user_type) VALUES ('cyork@nyc.com', 'pass', 'F');
 
 INSERT INTO freelancers (user_id, first_name, last_name, email, photo, rate, bio) VALUES (1, 'John', 'Doe', 'john@f-society.com', 'https://static.pexels.com/photos/92129/pexels-photo-92129.jpeg', 75.00, 'Able to blend in seamlessly to any office environment');
 INSERT INTO freelancers (user_id, first_name, last_name, email, photo, rate, bio) VALUES (3, 'Mary', 'Marbles', 'mary.marbles@yahoo.com', 'https://static.pexels.com/photos/746801/pexels-photo-746801.jpeg', 90.00, 'Always looking at the big picture');
