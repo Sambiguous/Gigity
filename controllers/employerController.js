@@ -39,11 +39,8 @@ freelancers.getData(id,function(data){
                 status: "Internal Database Error"
             });
         }else{
-            console.log(data);
-            var freelancerAccount = data
-        
-          
-          res.render("../views/freelancer-account.handlebars",{freelancers:freelancerAccount});
+ 
+          res.render("../views/freelancer-account.handlebars", data);
              //res.redirect("../views/freelancer-account.handlebars");
         };
     });
