@@ -66,6 +66,32 @@ var freelancers = {
       data.reviews = reviews;
       callback(data);
     });
+  }, 
+
+  getEmpToReview: function(user_id, callback){
+
+    orm.findEmpToReview(user_id, function(result) {
+
+      var employers = [];
+
+      for(i = 0; i < result.length; i++) {
+        employers.push(result[i].company);
+      }
+
+      callback(employers);
+    });
+  }, 
+
+  addReview: function(values, callback){
+
+    orm.addReview(values, function(result) {
+
+      var response = {
+        review_id: result.insertId,
+      }
+      callback(response);
+
+    });
   }
 };
 
