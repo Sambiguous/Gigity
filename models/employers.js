@@ -46,6 +46,14 @@ var employers = {
       callback(res);
    
     });
+  },
+
+  selectBySkill: function(skill, callback) {
+
+    orm.findFreelancerBySkill(skill, function(result) {
+
+      callback(result);
+    });
   }
 };
 
