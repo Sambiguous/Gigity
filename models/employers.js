@@ -36,6 +36,14 @@ var employers = {
         }
         callback(responseToController);
       });
+    
+
+    });
+  },
+  selectAll: function(callback) {
+    orm.selectAll("freelancers",function(res) {
+      callback(res);
+   
     });
   }
 };

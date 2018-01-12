@@ -11,9 +11,21 @@ var employers = require("../models/employers.js");
 router.get("/", function(req, res) {
     console.log(req.cookies);
 
-    fs.readFile(PATH + 'freelancer-board.html', 'utf-8', function(err, data){
-        if(err) throw err;
-        res.send(data);
+   employers.selectAll(function(data){
+      if(data === "Database Error"){
+            res.send({
+                status: "Internal Database Error"
+            });
+        }else{
+            console.log(data);
+            var freelancerBoard = {
+                freelancers: data
+            };
+           // console.log(freelancerBoard)
+          res.render("../views/freelancer-board.handlebars",{freelancers:freelancerBoard});
+            
+       
+        };
     });
 });
 
@@ -43,7 +55,7 @@ router.get('/freelancer-board', function(req, res){
         },
     ]
 
-    res.render('../views/freelancer-board.handlebars', {freelancers: dummyData})
+    res.render('../views/freelancer-board.handlebars', {freelancers: dummyData});
 });
 
 
@@ -67,11 +79,19 @@ router.post("/signup", function(req, res) {
     });
 });
 
-// router.put("/", function(req, res) {
 
-// });
 
+ /*
+ router.put("/employers/:id", function(req, res) {
+    
+    employers.update(req.params.id,)
+    id, column, value, callback
+
+
+ });
+*/
 router.delete("/", function(req, res) {
+
 
 });
 
