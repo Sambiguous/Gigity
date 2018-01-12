@@ -24,6 +24,13 @@ router.get("/", function(req, res) {
     };
 });
 
+//LOGOUT ROUTE
+router.get('/logout', function(req, res){
+    res.clearCookie('type');
+    res.clearCookie('id');
+    res.redirect('/');
+})
+
 //LOGIN ROUTE
 router.post("/login", function(req, res){
     console.log("req.body", req.body)
