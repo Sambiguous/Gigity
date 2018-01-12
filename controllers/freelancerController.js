@@ -13,7 +13,7 @@ var freelancers = require("../models/freelancers.js");
 //FREELANCER LANDING PAGE ROUTE
 //==============================
 router.get("/", function(req, res) {
-    //if(req.cookies.type === 'F'){
+    if(req.cookies.type === 'F'){
         res.render('../views/freelancer-view.handlebars', {
             first_name: "test",
             last_name: "test",
@@ -21,23 +21,20 @@ router.get("/", function(req, res) {
             rate: 45.00,
             email: "email@email",
             photo: 'https://static.pexels.com/photos/324658/pexels-photo-324658.jpeg',
+            hasReviews: true,
             reviews: [{review: "text"}, {review: "text"}]
         });
-        // fs.readFile(PATH + 'freelancer-view.html', 'utf-8', function(err, data){
-        //     if(err) throw err;
-    
-        //     res.send(data);
-        // })
-    // } else{
-    //     res.clearCookie('type');
-    //     res.clearCookie('id');
-    //     res.redirect('/')
-    // }
+
+     } else{
+        res.clearCookie('type');
+        res.clearCookie('id');
+        res.redirect('/')
+    } 
 });
 
-//========================
+//=========================
 //FREELANCER SIGN-UP ROUTE
-//========================
+//=========================
 router.post("/signup", function(req, res) {
     let data = req.body
     
@@ -47,21 +44,16 @@ router.post("/signup", function(req, res) {
 
     freelancers.createNew(data, function(result){
 
-        //stuff
+        //set cookie with relevent data
+
+        res.cookie('type', result.type);
+        res.cookie('id', result.user_id);;
+
+        res.send({
+            status: 'success',
+            url: '/freelancers'
+        });
     });
-
-
-
-
-
-
-
-
-
-    console.log(data['skills[]'])
-    res.send("lol");
-
-
 });
 
 // router.put("/", function(req, res) {

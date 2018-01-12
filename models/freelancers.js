@@ -15,13 +15,16 @@ var freelancers = {
           user_id: userResult.insertId,
           type: 'F'
         }
-      })
+        callback(responseToController);
 
-      let frlSkillsTableData = []
-      for(i in requestData.skills){
-        orm.addFreelancerSkill([userResult.insertId, requestData.skills[i]], function(result){})
-        console.log([userResult.insertId, requestData.skills[i]])
-      }
+        let frlSkillsTableData = []
+        for(i in requestData.skills){
+          orm.addFreelancerSkill([userResult.insertId, requestData.skills[i]], function(result){})
+          console.log('freelancer.js', [userResult.insertId, requestData.skills[i]])
+        }
+      });
+
+
     });
   }
 };
