@@ -36,14 +36,30 @@ router.get("/", function(req, res) {
 });
 
 //========================
-//FREELANCER SIGNUP ROUTE
+//FREELANCER SIGN-UP ROUTE
 //========================
 router.post("/signup", function(req, res) {
-    console.log(req.body);
-    res.send({
-        url: '/freelancers'
-    })
+    let data = req.body
+    
+    //clean up object for use by the controller
+    data.skills = data['skills[]']
+    delete data['skills[]']
 
+    freelancers.createNew(data, function(result){
+
+        //stuff
+    });
+
+
+
+
+
+
+
+
+
+    console.log(data['skills[]'])
+    res.send("lol");
 
 
 });

@@ -84,7 +84,7 @@ var orm = {
   },
 
   addUser: function(values, callback) {
-    var queryString = "INSERT INTO users (username, userpassword, user_type) VALUES (?) ";
+    var queryString = "INSERT INTO users (user_email, user_password, user_type) VALUES (?) ";
  
     connection.query(queryString, [values], function(err, result) {
       if (err) {
@@ -106,7 +106,7 @@ var orm = {
   },
 
   addFreelancer: function(values, callback) {
-    var queryString = "INSERT INTO freelancers (user_id, first_name, last_name, email, phone, photo, rate, bio) VALUES (?) ";
+    var queryString = "INSERT INTO freelancers (user_id, first_name, last_name, email, photo, rate) VALUES (?) ";
  
     connection.query(queryString, [values], function(err, result) {
       if (err) {
@@ -116,10 +116,10 @@ var orm = {
     });
   },
 
-  addFreelancerSkill: function(id, skill, callback) {
+  addFreelancerSkill: function(values, callback) {
     var queryString = "INSERT INTO freelancer_skills (user_id, skill_id) VALUES (?) ";
  
-    connection.query(queryString, [id, skill], function(err, result) {
+    connection.query(queryString, [values], function(err, result) {
       if (err) {
         throw err;
       }

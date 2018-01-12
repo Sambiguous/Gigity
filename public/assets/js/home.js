@@ -63,30 +63,43 @@ $(document).ready(function() {
     })
   });
 
-
-
   $('#frl-sign-up').on('click', function(event){
 
-    console.log("it worked");
-    event.preventDefault();
-    $.post({
-      url: '/freelancers/signup',
-      data: {
-        type: 'F',
-        password: $('#freelancer_password').val(),
-        first_name: $('#first_name').val(),
-        last_name: $('#last_name').val(),
-        email: $('#freelancer_email').val(),
-        photo: $('#photo').val(),
-        rate: $('#rate').val(),
-      skills: [['front', $('#front').data('selected') ],['back',$('#back').data('selected') ],['data',$('#data').data('selected') ],['it',$('#it').data('selected') ]]
+    var ids = {
+      front: 1,
+      back: 2,
+      data: 3,
+      it: 4,
+    }
+
+    let skills = [];
+    $('.skill').each(function(index, element){
+      
+      if($(this).data('selected') === 1){
+        skills.push(ids[$(this).attr('id')])
       }
-    }).done(function(result){
-      window.location.href = result.url
-
-    })
+    });
+    if(isNaN(parseFloat($('#rate').val()))){
+      //error code goes here
+    } else {
+      $.post({
+        url: '/freelancers/signup',
+        data: {
+          type: 'F',
+          password: $('#freelancer_password').val(),
+          first_name: $('#first_name').val(),
+          last_name: $('#last_name').val(),
+          email: $('#freelancer_email').val(),
+          photo: $('#photo').val(),
+          rate: $('#rate').val(),
+          skills: skills
+        }
+      }).done(function(result){
+        console.log(result);
+        
   
-
+      })
+    }
   })
 });
 
