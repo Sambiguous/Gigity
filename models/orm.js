@@ -326,6 +326,22 @@ var orm = {
     });
   },
 
+    findEmpToReview: function(id, callback) {
+    var queryString = "SELECT * FROM jobs J ";
+    queryString += "INNER JOIN employers E ON E.user_id = J.employer_id ";
+    queryString += "WHERE J.freelancer_id = ? ";
+    queryString += "AND J.job_status = 4 AND NOT EXISTS ";
+    queryString += "(SELECT * FROM reviews R WHERE R.job_id = J.job_id ";
+    queryString += "AND R.reviewer_id = J.freelancer_id)";
+
+    connection.query(queryString, [id], function(err, result) {
+      if (err) {
+        throw err;
+      }
+      callback(result);
+    });
+  },
+
     findJobsToReviewEmp: function(id, callback) {
     var queryString = "SELECT * FROM jobs J WHERE J.employer_id = ? ";
     queryString += "AND J.job_status = 4 AND NOT EXISTS ";
