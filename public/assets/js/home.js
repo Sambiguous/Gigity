@@ -64,6 +64,7 @@ $(document).ready(function() {
   });
 
   $('#frl-sign-up').on('click', function(event){
+    event.preventDefault();
 
     var ids = {
       front: 1,
@@ -79,6 +80,9 @@ $(document).ready(function() {
         skills.push(ids[$(this).attr('id')])
       }
     });
+
+
+
     if(isNaN(parseFloat($('#rate').val()))){
       //error code goes here
     } else {
@@ -95,7 +99,10 @@ $(document).ready(function() {
           skills: skills
         }
       }).done(function(result){
-        console.log(result);
+        console.log("home.js", result);
+        if(result.status === 'success'){
+          window.location.href = result.url
+        }
         
   
       })
