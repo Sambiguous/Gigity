@@ -20,11 +20,8 @@ var freelancers = {
         let frlSkillsTableData = []
         for(i in requestData.skills){
           orm.addFreelancerSkill([userResult.insertId, requestData.skills[i]], function(result){})
-          console.log('freelancer.js', [userResult.insertId, requestData.skills[i]])
         }
       });
-
-
     });
   }, 
 
@@ -65,7 +62,6 @@ var freelancers = {
         
         data.reviews = reviews;
         data.hasReviews = reviews.length > 0;
-        console.log(data);
         callback(data);
       });
     });

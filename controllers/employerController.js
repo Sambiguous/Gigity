@@ -19,10 +19,11 @@ router.get("/", function(req, res) {
                     status: "Internal Database Error"
                 });
             }else{
-                console.log(data);
-                var freelancerBoard = data
+                //let str = JSON.stringify(data)
             
-                res.render("../views/freelancer-board.handlebars",{freelancers:freelancerBoard}); 
+                //res.render("../views/freelancer-board.handlebars", {freelancers: str}); 
+                res.render("../views/freelancer-board.handlebars", {freelancers: data});
+            
             };
         });
     } else{
@@ -42,6 +43,7 @@ router.get("/freelancer/:id", function(req, res){
                 status: "Internal Database Error"
             });
         }else{
+            console.log("employer controller line 45:", data);
           res.render("../views/freelancer-account.handlebars", data);
         };
     });
@@ -51,6 +53,7 @@ router.post("/messages", function(req, res){
     
     var data = req.body
 
+<<<<<<< HEAD
 employers.jobRequest(data,function(result){
    if(result === "Database Error"){
             res.send({
@@ -64,6 +67,18 @@ employers.jobRequest(data,function(result){
          
         };
     });
+=======
+    employers.jobRequest(currentEmployer,id,data,function(data){
+    if(data === "Database Error"){
+                res.send({
+                    status: "Internal Database Error"
+                });
+            }else{
+                console.log(data);
+            
+            };
+        });
+>>>>>>> aca5fb985bcb7155e4318fc47147207fc1d33dd2
 });
 
 router.post("/signup", function(req, res) {
