@@ -60,14 +60,14 @@ router.post("/messages", function(req, res){
     
     var data = req.body
 
-    employers.jobRequest(currentEmployer,id,data,function(data){
-    if(data === "Database Error"){
+    employers.jobRequest(data,function(result){
+    if(result === "Database Error"){
                 res.send({
                     status: "Internal Database Error"
                 });
             }else{
                 console.log(data);
-            
+            res.redirect('/');
             };
         });
 });

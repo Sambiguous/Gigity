@@ -70,7 +70,7 @@ CREATE TABLE jobs
 	job_id INT NOT NULL AUTO_INCREMENT, 
 	employer_id INT,
     freelancer_id INT,
-    employer_email VARCHAR(50) NOT NULL,
+    employer_email VARCHAR(50) ,
     job_descr LONGTEXT,
     job_status INT DEFAULT 1,
     FOREIGN KEY(employer_id) REFERENCES employers(user_id),
