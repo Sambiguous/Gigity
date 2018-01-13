@@ -45,6 +45,7 @@ var freelancers = {
       data.rate = result[0].rate;
       data.photo = result[0].photo;
       data.id = result[0].user_id;
+      data.bio = result[0].bio;
 
       orm.findFreelancerReviewsByID(user_id, function(result) {
 
