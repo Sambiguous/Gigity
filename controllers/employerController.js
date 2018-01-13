@@ -19,9 +19,9 @@ router.get("/", function(req, res) {
                     status: "Internal Database Error"
                 });
             }else{
-                var freelancerBoard = data
+                let str = JSON.stringify(data)
             
-                res.render("../views/freelancer-board.handlebars",{freelancers:freelancerBoard}); 
+                res.render("../views/freelancer-board.handlebars", {freelancers: str}); 
             };
         });
     } else{

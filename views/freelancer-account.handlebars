@@ -1,18 +1,18 @@
-<div class="profile-photo"> 
-    <!-- Navigation bar -->
-    <nav>
-      <div class="nav-wrapper">
-        <a href="home.html">
-          <img src="assets/css/images/black-logo.png" class="brand-logo"></a>
-          <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-          <ul class="right hide-on-med-and-down">
-            <li><a href="freelancer-board.html" id="browse">Browse Freelancers</a></li>
-          </ul>
-          <ul class="side-nav" id="mobile-demo">
-            <li><a href="freelancer-board.html">Browse Freelancers</a></li>
-          </ul>
-      </div>
-    </nav>
+<div class="profile-photo">	
+		<!-- Navigation bar -->
+	  <nav>
+	    <div class="nav-wrapper">
+		    <a href="home.html">
+		      <img src="/assets/css/images/black-logo.png" class="brand-logo"></a>
+		      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+		      <ul class="right hide-on-med-and-down">
+		        <li><a href="freelancer-board.html" id="browse">Browse Freelancers</a></li>
+		      </ul>
+		      <ul class="side-nav" id="mobile-demo">
+		        <li><a href="freelancer-board.html">Browse Freelancers</a></li>
+		      </ul>
+	    </div>
+	  </nav>
 
     <!-- container displays the freelancers profile information and existing reviews -->
     
@@ -135,6 +135,7 @@
 
 </div>
 
+<<<<<<< HEAD
   <!-- scripts -->
 
   <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
@@ -163,6 +164,51 @@
 
       $('#send-contact').on("click", function(event){
         event.preventDefault();
+=======
+	<!-- scripts -->
+
+ 	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <script src="/assets/js/home.js"></script>
+ <script type="text/javascript">
+  $('#contact').on("click", function(event){
+    event.preventDefault();
+    console.log("cmon");
+    $("#review-modal").hide();
+    $("#contact-modal").show();
+    
+  });
+  $('#close-contact').on("click", function(event){
+    event.preventDefault();
+    console.log("cmon");
+    
+    $("#contact-modal").hide();
+    $("#name").val() = "";
+    $("#email").val() = "";
+    $("#message").val() = "";
+ //   $("#contact-modal").empty();
+    
+  });
+  $('#close-review').on("click", function(event){
+    event.preventDefault();
+    console.log("cmon");
+    
+    $("#review-modal").hide();
+    $("#name").val() = "";
+    $("#rating").val() = "";
+    $("#review").val() = "";
+ //   $("#contact-modal").empty();
+    
+  });
+  $('#review').on("click", function(event){
+    event.preventDefault();
+    console.log("cmon");
+    $("#contact-modal").hide();
+    $("#review-modal").show();
+  });
+   $('#send-contact').on("click", function(event){
+    event.preventDefault();
+>>>>>>> sort
     
       $.post({
       url: '/freelancer/messages/'+this.user_id,
@@ -179,6 +225,10 @@
       }
     });
   });
+<<<<<<< HEAD
 });
 
  </script>
+=======
+ </script>
+>>>>>>> sort
