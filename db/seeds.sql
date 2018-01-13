@@ -30,6 +30,8 @@ INSERT INTO users (user_email, user_password, user_type) VALUES ('gob@bluthsbana
 INSERT INTO users (user_email, user_password, user_type) VALUES ('rachel@gmail.com', 'pass', 'F');
 INSERT INTO users (user_email, user_password, user_type) VALUES ('giggity@gmail.com', 'pass', 'F');
 INSERT INTO users (user_email, user_password, user_type) VALUES ('cyork@nyc.com', 'pass', 'F');
+INSERT INTO users (user_email, user_password, user_type) VALUES ('demofreelancer@email.com', 'pass', 'F');
+INSERT INTO users (user_email, user_password, user_type) VALUES ('bobvance@vancerefrigeration.com', 'pass', 'E');
 
 
 INSERT INTO freelancers (user_id, first_name, last_name, email, photo, rate, bio) VALUES (1, 'John', 'Doe', 'john@f-society.com', 'https://static.pexels.com/photos/92129/pexels-photo-92129.jpeg', 75.00, 'Able to blend in seamlessly to any office environment');
@@ -48,11 +50,13 @@ INSERT INTO freelancers (user_id, first_name, last_name, email, photo, rate, bio
 INSERT INTO freelancers (user_id, first_name, last_name, email, photo, rate, bio) VALUES (17, 'Rachel', 'Green', 'rachel@gmail.com', 'https://static.pexels.com/photos/295564/pexels-photo-295564.jpeg', 65.00, '');
 INSERT INTO freelancers (user_id, first_name, last_name, email, photo, rate, bio) VALUES (18, 'Glenn', 'Quagmire', 'giggity@gmail.com', 'https://static.pexels.com/photos/7066/man-relax-couch-study.jpg', 75.00, '');
 INSERT INTO freelancers (user_id, first_name, last_name, email, photo, rate, bio) VALUES (19, 'Charlotte', 'York', 'cyork@nyc.com', 'https://static.pexels.com/photos/253758/pexels-photo-253758.jpeg', 80.00, '');
+INSERT INTO freelancers (user_id, first_name, last_name, email, photo, rate, bio) VALUES (20, 'Demo', 'Freelancer', 'demofreelancer@email.com','https://static.pexels.com/photos/211050/pexels-photo-211050.jpeg', 25.00, '');
 
 
 INSERT INTO employers (user_id, first_name, last_name, email, company) VALUES (2, 'Jeff', 'Smith', 'j.smith@widgets.com', 'Widgets R Us');
 INSERT INTO employers (user_id, first_name, last_name, email, company) VALUES (5, 'Suzy', 'Snowflake', 's-snowflake@snowblower.com', 'Snowblower Central');
 INSERT INTO employers (user_id, first_name, last_name, email, company) VALUES (6, 'George', 'Alexander', 'George@vandelay.com', 'Vandelay Industries');
+INSERT INTO employers (user_id, first_name, last_name, email, company) VALUES (21, 'Bob', 'Vance', 'bobvance@vancerefrigeration.com', 'Vance Refrigeration');
 
 INSERT INTO freelancer_skills (user_id, skill_id) VALUES (1, 1);
 INSERT INTO freelancer_skills (user_id, skill_id) VALUES (1, 2);
@@ -78,6 +82,7 @@ INSERT INTO freelancer_skills (user_id, skill_id) VALUES (17, 4);
 INSERT INTO freelancer_skills (user_id, skill_id) VALUES (18, 3);
 INSERT INTO freelancer_skills (user_id, skill_id) VALUES (18, 4);
 INSERT INTO freelancer_skills (user_id, skill_id) VALUES (19, 2);
+INSERT INTO freelancer_skills (user_id, skill_id) VALUES (20, 1);
 
 INSERT INTO jobs (employer_id, freelancer_id, job_descr, job_status) VALUES (2, 1, 'Create storefront for dark web sales', 4);
 INSERT INTO jobs (employer_id, job_descr) VALUES (2, 'Create email template');
