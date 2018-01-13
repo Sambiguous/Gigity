@@ -31,7 +31,7 @@
           <span id="card-occupation"><p>{{#each this.skills}}{{this}} | {{/each}}
           <span id="card-rate">${{this.rate}} per hour</p></span>
           <p id="email">{{this.email}}</p>
-          <div id="id">{{this.id}}</div>
+          <div class= "id" name="{{this.id}}"</div>
           <br>
 
       <!-- card buttons to open modals -->
@@ -167,51 +167,16 @@
         endingTop: '10%', // Ending top style attribute
       });
 
-      $('#send-contact').on("click", function(event){
+      $('#contact-submit').on("click", function(event){
         event.preventDefault();
-      })
+var freelancer_id = $(".id").attr("name")
+console.log(freelancer_id);
 
-      $('#contact').on("click", function(event){
-        event.preventDefault();
-        console.log("cmon");
-        $("#review-modal").hide();
-        $("#contact-modal").show();
-      });
-
-      $('#close-contact').on("click", function(event){
-        event.preventDefault();
-        console.log("cmon");
-        
-        $("#contact-modal").hide();
-        $("#name").val() = "";
-        $("#email").val() = "";
-        $("#message").val() = "";
-        // $("#contact-modal").empty();
-      });
-      $('#close-review').on("click", function(event){
-        event.preventDefault();
-        console.log("cmon");
-        
-        $("#review-modal").hide();
-        $("#name").val() = "";
-        $("#rating").val() = "";
-        $("#review").val() = "";
-    //   $("#contact-modal").empty();
-      });
-
-      $('#review').on("click", function(event){
-        event.preventDefault();
-        console.log("cmon");
-        $("#contact-modal").hide();
-        $("#review-modal").show();
-      });
-
-      $('#send-contact').on("click", function(event){
-        event.preventDefault();
   
       $.post({
-        url: '/freelancer/messages/'+this.user_id,
+        url: '/employers/messages/',
         data: {
+          id: freelancer_id,
           name:  $("#name").val(),
           email: $("#emaill").val(),
           message: $("#message").val()
@@ -219,7 +184,9 @@
       }).done(function(response){
         if(response.status === 'success'){
           console.log("ok");
-        } else{}
+        } else{
+
+        }
       });
   });
 });
