@@ -111,10 +111,10 @@ h3 {
 		background-color: white;
 		opacity: 1;
 }
-.card-img {
-	height: 300px;
-	object-fit: cover;
 
+.card-img {
+	max-height: 300px;
+	object-fit: cover;
 }
 
 .error-msg {
