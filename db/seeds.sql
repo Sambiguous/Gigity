@@ -49,6 +49,12 @@ INSERT INTO freelancers (user_id, first_name, last_name, email, photo, rate, bio
 INSERT INTO freelancers (user_id, first_name, last_name, email, photo, rate, bio) VALUES (18, 'Glenn', 'Quagmire', 'giggity@gmail.com', 'https://static.pexels.com/photos/7066/man-relax-couch-study.jpg', 75.00, '');
 INSERT INTO freelancers (user_id, first_name, last_name, email, photo, rate, bio) VALUES (19, 'Charlotte', 'York', 'cyork@nyc.com', 'https://static.pexels.com/photos/253758/pexels-photo-253758.jpeg', 80.00, '');
 
+UPDATE `gigity_db`.`freelancers` SET `bio`='I love hiking, dancing, jogging, and coding!' WHERE `frl_id`='4';
+UPDATE `gigity_db`.`freelancers` SET `bio`='Im a leo and a professional bootstrapper!' WHERE `frl_id`='5';
+UPDATE `gigity_db`.`freelancers` SET `bio`='Love my dog, my wife, and jQuery' WHERE `frl_id`='6';
+UPDATE `gigity_db`.`freelancers` SET `bio`='I got you for the low' WHERE `frl_id`='9';
+UPDATE `gigity_db`.`freelancers` SET `bio`='Love working with JavaScript!' WHERE `frl_id`='7';
+
 
 INSERT INTO employers (user_id, first_name, last_name, email, company) VALUES (2, 'Jeff', 'Smith', 'j.smith@widgets.com', 'Widgets R Us');
 INSERT INTO employers (user_id, first_name, last_name, email, company) VALUES (5, 'Suzy', 'Snowflake', 's-snowflake@snowblower.com', 'Snowblower Central');

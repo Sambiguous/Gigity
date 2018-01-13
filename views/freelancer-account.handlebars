@@ -29,8 +29,12 @@
           <div class="card-content">
           <span class="card-title"><h3>{{this.first_name}} {{this.last_name}}</h3></span>
           <span id="card-occupation"><p>{{#each this.skills}}{{this}} | {{/each}}
-          <span id="card-rate">${{this.rate}} per hour</p></span>
+          <span id="card-rate">${{this.rate}} /hr</p></span>
+         
+          <span id="bio">{{this.bio}}</p></span>
+
           <p id="email">{{this.email}}</p>
+
           <div class= "id" name="{{this.id}}"</div>
           <br>
 
