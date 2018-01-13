@@ -35,11 +35,11 @@ INSERT INTO users (user_email, user_password, user_type) VALUES ('cyork@nyc.com'
 INSERT INTO freelancers (user_id, first_name, last_name, email, photo, rate, bio) VALUES (1, 'John', 'Doe', 'john@f-society.com', 'https://static.pexels.com/photos/92129/pexels-photo-92129.jpeg', 75.00, 'Able to blend in seamlessly to any office environment');
 INSERT INTO freelancers (user_id, first_name, last_name, email, photo, rate, bio) VALUES (3, 'Mary', 'Marbles', 'mary.marbles@yahoo.com', 'https://static.pexels.com/photos/746801/pexels-photo-746801.jpeg', 90.00, 'Always looking at the big picture');
 INSERT INTO freelancers (user_id, first_name, last_name, email, photo, rate, bio) VALUES (4, 'Ivan', 'Oldman', 'I.M.Old@geocities.com', 'https://static.pexels.com/photos/334029/pexels-photo-334029.jpeg', 55.00, 'I have years of programming experience');
-INSERT INTO freelancers (user_id, first_name, last_name, email, photo, rate, bio) VALUES (7, 'Ken', 'Adams', 'kadams@gmail.com', 'https://static.pexels.com/photos/428339/pexels-photo-428339.jpeg', 60.00, '');
-INSERT INTO freelancers (user_id, first_name, last_name, email, photo, rate, bio) VALUES (8, 'Regina', 'Phalange', 'reginap@gmail.com', 'https://static.pexels.com/photos/206445/pexels-photo-206445.jpeg', 100.00, '');
-INSERT INTO freelancers (user_id, first_name, last_name, email, photo, rate, bio) VALUES (9, 'Ben', 'Wyatt', 'bwyatt@cityofpawnee.com', 'https://static.pexels.com/photos/450214/pexels-photo-450214.jpeg', 75.00, '');
-INSERT INTO freelancers (user_id, first_name, last_name, email, photo, rate, bio) VALUES (10, 'Will', 'Truman', 'wtruman@yahoo.com', 'https://static.pexels.com/photos/375880/pexels-photo-375880.jpeg', 50.00, '');
-INSERT INTO freelancers (user_id, first_name, last_name, email, photo, rate, bio) VALUES (11, 'Charlie', 'Day', 'cday@hotmail.com', 'https://static.pexels.com/photos/91227/pexels-photo-91227.jpeg', 90.00, '');
+INSERT INTO freelancers (user_id, first_name, last_name, email, photo, rate, bio) VALUES (7, 'Ken', 'Adams', 'kadams@gmail.com', 'https://static.pexels.com/photos/428339/pexels-photo-428339.jpeg', 60.00, 'I love hiking, dancing, jogging, and coding!');
+INSERT INTO freelancers (user_id, first_name, last_name, email, photo, rate, bio) VALUES (8, 'Regina', 'Phalange', 'reginap@gmail.com', 'https://static.pexels.com/photos/206445/pexels-photo-206445.jpeg', 100.00, 'Im a leo and a professional bootstrapper!');
+INSERT INTO freelancers (user_id, first_name, last_name, email, photo, rate, bio) VALUES (9, 'Ben', 'Wyatt', 'bwyatt@cityofpawnee.com', 'https://static.pexels.com/photos/450214/pexels-photo-450214.jpeg', 75.00, 'Love my dog, my wife, and jQuery');
+INSERT INTO freelancers (user_id, first_name, last_name, email, photo, rate, bio) VALUES (10, 'Will', 'Truman', 'wtruman@yahoo.com', 'https://static.pexels.com/photos/375880/pexels-photo-375880.jpeg', 50.00, 'I got you for the low');
+INSERT INTO freelancers (user_id, first_name, last_name, email, photo, rate, bio) VALUES (11, 'Charlie', 'Day', 'cday@hotmail.com', 'https://static.pexels.com/photos/91227/pexels-photo-91227.jpeg', 90.00, 'Love working with JavaScript!');
 INSERT INTO freelancers (user_id, first_name, last_name, email, photo, rate, bio) VALUES (12, 'Cosmo', 'Kramer', 'mrichards@gmail.com', 'https://static.pexels.com/photos/428341/pexels-photo-428341.jpeg', 45.00, '');
 INSERT INTO freelancers (user_id, first_name, last_name, email, photo, rate, bio) VALUES (13, 'Dee', 'Reynolds', 'dee@iasip.com', 'https://www.pexels.com/photo/attractive-beautiful-beauty-cute-539727.jpeg', 50.00, '');
 INSERT INTO freelancers (user_id, first_name, last_name, email, photo, rate, bio) VALUES (14, 'Jack', 'McFarland', 'justjack@gmail.com', 'https://static.pexels.com/photos/724889/pexels-photo-724889.png', 75.00, '');
@@ -48,12 +48,6 @@ INSERT INTO freelancers (user_id, first_name, last_name, email, photo, rate, bio
 INSERT INTO freelancers (user_id, first_name, last_name, email, photo, rate, bio) VALUES (17, 'Rachel', 'Green', 'rachel@gmail.com', 'https://static.pexels.com/photos/295564/pexels-photo-295564.jpeg', 65.00, '');
 INSERT INTO freelancers (user_id, first_name, last_name, email, photo, rate, bio) VALUES (18, 'Glenn', 'Quagmire', 'giggity@gmail.com', 'https://static.pexels.com/photos/7066/man-relax-couch-study.jpg', 75.00, '');
 INSERT INTO freelancers (user_id, first_name, last_name, email, photo, rate, bio) VALUES (19, 'Charlotte', 'York', 'cyork@nyc.com', 'https://static.pexels.com/photos/253758/pexels-photo-253758.jpeg', 80.00, '');
-
-UPDATE `gigity_db`.`freelancers` SET `bio`='I love hiking, dancing, jogging, and coding!' WHERE `frl_id`='4';
-UPDATE `gigity_db`.`freelancers` SET `bio`='Im a leo and a professional bootstrapper!' WHERE `frl_id`='5';
-UPDATE `gigity_db`.`freelancers` SET `bio`='Love my dog, my wife, and jQuery' WHERE `frl_id`='6';
-UPDATE `gigity_db`.`freelancers` SET `bio`='I got you for the low' WHERE `frl_id`='9';
-UPDATE `gigity_db`.`freelancers` SET `bio`='Love working with JavaScript!' WHERE `frl_id`='7';
 
 
 INSERT INTO employers (user_id, first_name, last_name, email, company) VALUES (2, 'Jeff', 'Smith', 'j.smith@widgets.com', 'Widgets R Us');
