@@ -29,6 +29,7 @@
           <span id="card-occupation"><p>{{#each this.skills}}{{this}} | {{/each}}
           <span id="card-rate">${{this.rate}} per hour</p></span>
           <p id="email">{{this.email}}</p>
+          <div id="id">{{this.id}}</div>
           <br>
 
       <!-- card buttons to open modals -->
@@ -63,10 +64,11 @@
 
   <div id="contact-modal" class="modal">
       <div class="modal-content">
-       <form class="col s12">
+         <form class="col s12">
+      
 
       <h3>Contact</h3>
-
+   
       <div class="input-field col s6">
           <input id="name" type="text" class="validate">
           <label for="name">Name</label>
@@ -83,7 +85,7 @@
         </div>
 
       <div class="modal-footer">
-        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Send</a>
+        <button id="contact-submit" class="modal-action modal-close waves-effect waves-green btn-flat">Send</button>
       </div>
 
     </form>
@@ -153,28 +155,38 @@
     startingTop: '4%', // Starting top style attribute
     endingTop: '10%', // Ending top style attribute
   });
+$('.review').on("click",function(event){
+  event.preventDefault();
+ var id = $("#id").html();
+  console.log(id);
+});
 
-   $('#send-contact').on("click", function(event){
+   
+  
+  
+  
+  $('#contact-submit').on('click', function(event){
     event.preventDefault();
     
-  
-  
-  $.post({
-      url: '/freelancer/messages/'+this.user_id,
+    $.post({
+      url: '/employers/messages/',
       data: {
-        name:  $("#name").val(),
-      email: $("#emaill").val(),
-      message: $("#message").val()
+        id : $("#id").html(),
+      name: $('#name').val(),
+      email: $('#email').val(),
+       message: $('#message').val()
+      
         
       }
     }).done(function(response){
       if(response.status === 'success'){
-       // window.location.href = response.url;
+        console.log("ok");
       } else{
         //failed account creation code goes here
       }
     })
   });
+  
 });
 
  </script>

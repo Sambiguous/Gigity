@@ -138,10 +138,10 @@ var orm = {
     });
   },
 
-  addJob: function(employerId,freelancerId, descr,callback) {
-    var queryString = "INSERT INTO jobs (employer_id,freelancer_id,job_descr) VALUES (?) ";
+  addJob: function(freelancerId, email, message,callback) {
+    var queryString = "INSERT INTO jobs (freelancer_id,employer_email,job_descr) VALUES (?) ";
  
-    connection.query(queryString, [employerId,freelancerId, descr], function(err, result) {
+    connection.query(queryString, [freelancerId, email, message], function(err, result) {
       if (err) {
         throw err;
       }

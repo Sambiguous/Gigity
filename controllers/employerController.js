@@ -47,17 +47,20 @@ router.get("/freelancer/:id", function(req, res){
     });
 });
 
-router.post("/freelancer/messages/:id", function(req, res){
-    var id = req.params.id
+router.post("/messages", function(req, res){
+    
     var data = req.body
 
-employers.jobRequest(currentEmployer,id,data,function(data){
-   if(data === "Database Error"){
+employers.jobRequest(data,function(result){
+   if(result === "Database Error"){
             res.send({
                 status: "Internal Database Error"
             });
         }else{
-            console.log(data);
+            res.send({
+                status: 'success',
+                url: '/employers'
+            });
          
         };
     });
@@ -74,7 +77,7 @@ router.post("/signup", function(req, res) {
             //set cookie with relavent data
             res.cookie('type', result.type);
             res.cookie('id', result.user_id);
-            currentEmployer = result.user_id
+            
             res.send({
                 status: 'success',
                 url: '/employers'
