@@ -20,9 +20,14 @@ router.get("/", function(req, res) {
                 });
             }else{
                 console.log(data);
-                var freelancerBoard = data
+                // let freelancersArray = []
+                // for(var i = 0; i < data.length; i++){
+                //     freelancersArray.push(data[i]);
+                // }
+                // let str = JSON.stringify(freelancersArray)
             
-                res.render("../views/freelancer-board.handlebars",{freelancers:freelancerBoard}); 
+                res.render("../views/freelancer-board.handlebars",{freelancers:data}); 
+                //res.render("../views/freelancer-board.handlebars", {freelancers: str})
             };
         });
     } else{
