@@ -137,7 +137,8 @@
 
 </div>
 
-<<<<<<< HEAD
+
+
   <!-- scripts -->
 
   <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
@@ -148,44 +149,6 @@
   <script type="text/javascript">
 
      $(document).ready(function() {
-<<<<<<< HEAD
-  $('select').material_select();
-  $('.parallax').parallax();
-  $(".button-collapse").sideNav();
-  $('.dropdown-button').dropdown('open');
-  $('.dropdown-button').dropdown('close');
-
-    $('.modal').modal({
-    dismissible: true, // Modal can be dismissed by clicking outside of the modal
-    opacity: .5, // Opacity of modal background
-    inDuration: 300, // Transition in duration
-    outDuration: 200, // Transition out duration
-    startingTop: '4%', // Starting top style attribute
-    endingTop: '10%', // Ending top style attribute
-  });
-$('.review').on("click",function(event){
-  event.preventDefault();
- var id = $("#id").html();
-  console.log(id);
-});
-
-   
-  
-  
-  
-  $('#contact-submit').on('click', function(event){
-    event.preventDefault();
-    
-    $.post({
-      url: '/employers/messages/',
-      data: {
-        id : $("#id").html(),
-      name: $('#name').val(),
-      email: $('#email').val(),
-       message: $('#message').val()
-      
-        
-=======
 
       $('select').material_select();
       $('.parallax').parallax();
@@ -204,76 +167,58 @@ $('.review').on("click",function(event){
 
       $('#send-contact').on("click", function(event){
         event.preventDefault();
-=======
-	<!-- scripts -->
+      })
 
- 	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
-    <script src="/assets/js/home.js"></script>
- <script type="text/javascript">
-  $('#contact').on("click", function(event){
-    event.preventDefault();
-    console.log("cmon");
-    $("#review-modal").hide();
-    $("#contact-modal").show();
-    
-  });
-  $('#close-contact').on("click", function(event){
-    event.preventDefault();
-    console.log("cmon");
-    
-    $("#contact-modal").hide();
-    $("#name").val() = "";
-    $("#email").val() = "";
-    $("#message").val() = "";
- //   $("#contact-modal").empty();
-    
-  });
-  $('#close-review').on("click", function(event){
-    event.preventDefault();
-    console.log("cmon");
-    
-    $("#review-modal").hide();
-    $("#name").val() = "";
-    $("#rating").val() = "";
-    $("#review").val() = "";
- //   $("#contact-modal").empty();
-    
-  });
-  $('#review').on("click", function(event){
-    event.preventDefault();
-    console.log("cmon");
-    $("#contact-modal").hide();
-    $("#review-modal").show();
-  });
-   $('#send-contact').on("click", function(event){
-    event.preventDefault();
->>>>>>> sort
-    
-      $.post({
-      url: '/freelancer/messages/'+this.user_id,
-      data: {
-        name:  $("#name").val(),
-        email: $("#emaill").val(),
-        message: $("#message").val()
->>>>>>> aca5fb985bcb7155e4318fc47147207fc1d33dd2
-      }
-    }).done(function(response){
-      if(response.status === 'success'){
-        console.log("ok");
-      } else{
+      $('#contact').on("click", function(event){
+        event.preventDefault();
+        console.log("cmon");
+        $("#review-modal").hide();
+        $("#contact-modal").show();
+      });
+
+      $('#close-contact').on("click", function(event){
+        event.preventDefault();
+        console.log("cmon");
         
-      }
-    });
-  });
-<<<<<<< HEAD
-  
-=======
-<<<<<<< HEAD
->>>>>>> aca5fb985bcb7155e4318fc47147207fc1d33dd2
-});
+        $("#contact-modal").hide();
+        $("#name").val() = "";
+        $("#email").val() = "";
+        $("#message").val() = "";
+        // $("#contact-modal").empty();
+      });
+      $('#close-review').on("click", function(event){
+        event.preventDefault();
+        console.log("cmon");
+        
+        $("#review-modal").hide();
+        $("#name").val() = "";
+        $("#rating").val() = "";
+        $("#review").val() = "";
+    //   $("#contact-modal").empty();
+      });
 
- </script>
-=======
- </script>
->>>>>>> sort
+      $('#review').on("click", function(event){
+        event.preventDefault();
+        console.log("cmon");
+        $("#contact-modal").hide();
+        $("#review-modal").show();
+      });
+
+      $('#send-contact').on("click", function(event){
+        event.preventDefault();
+  
+      $.post({
+        url: '/freelancer/messages/'+this.user_id,
+        data: {
+          name:  $("#name").val(),
+          email: $("#emaill").val(),
+          message: $("#message").val()
+        }
+      }).done(function(response){
+        if(response.status === 'success'){
+          console.log("ok");
+        } else{}
+      });
+  });
+});
+</script>
