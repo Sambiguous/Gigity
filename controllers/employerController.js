@@ -19,10 +19,10 @@ router.get("/", function(req, res) {
                     status: "Internal Database Error"
                 });
             }else{
-                //let str = JSON.stringify(data)
+                let str = JSON.stringify(data)
             
-                //res.render("../views/freelancer-board.handlebars", {freelancers: str}); 
-                res.render("../views/freelancer-board.handlebars", {freelancers: data});
+                res.render("../views/freelancer-board.handlebars", {freelancers: str}); 
+                //res.render("../views/freelancer-board.handlebars", {freelancers: data});
             
             };
         });
@@ -31,6 +31,13 @@ router.get("/", function(req, res) {
         res.clearCookie('id');
         res.redirect('/')
     }
+});
+
+router.post("/", function(req, res){
+    employers.selectBySkill(req.body.skill, function(result){
+        console.log("select by skill return:", result);
+        res.send(result);
+    });
 });
 
 
@@ -49,8 +56,8 @@ router.get("/freelancer/:id", function(req, res){
     });
 });
 
-router.post("/freelancer/messages/:id", function(req, res){
-    var id = req.params.id
+router.post("/messages", function(req, res){
+    
     var data = req.body
 
     employers.jobRequest(currentEmployer,id,data,function(data){
@@ -76,7 +83,7 @@ router.post("/signup", function(req, res) {
             //set cookie with relavent data
             res.cookie('type', result.type);
             res.cookie('id', result.user_id);
-            currentEmployer = result.user_id
+            
             res.send({
                 status: 'success',
                 url: '/employers'

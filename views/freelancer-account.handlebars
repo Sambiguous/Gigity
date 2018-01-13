@@ -29,6 +29,7 @@
           <span id="card-occupation"><p>{{#each this.skills}}{{this}} | {{/each}}
           <span id="card-rate">${{this.rate}} per hour</p></span>
           <p id="email">{{this.email}}</p>
+          <div id="id">{{this.id}}</div>
           <br>
 
       <!-- card buttons to open modals -->
@@ -66,10 +67,11 @@
 
   <div id="contact-modal" class="modal">
       <div class="modal-content">
-       <form class="col s12">
+         <form class="col s12">
+      
 
       <h3>Contact</h3>
-
+   
       <div class="input-field col s6">
           <input id="name" type="text" class="validate">
           <label for="name">Name</label>
@@ -86,7 +88,7 @@
         </div>
 
       <div class="modal-footer">
-        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Send</a>
+        <button id="contact-submit" class="modal-action modal-close waves-effect waves-green btn-flat">Send</button>
       </div>
 
     </form>
@@ -135,13 +137,14 @@
 
 </div>
 
-<<<<<<< HEAD
+
+
   <!-- scripts -->
 
   <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
 
-  <script src="../../public/assets/js/home.js"></script>
+  <script src="/assets/js/home.js"></script>
   
   <script type="text/javascript">
 
@@ -164,71 +167,58 @@
 
       $('#send-contact').on("click", function(event){
         event.preventDefault();
-=======
-	<!-- scripts -->
+      })
 
- 	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
-    <script src="/assets/js/home.js"></script>
- <script type="text/javascript">
-  $('#contact').on("click", function(event){
-    event.preventDefault();
-    console.log("cmon");
-    $("#review-modal").hide();
-    $("#contact-modal").show();
-    
-  });
-  $('#close-contact').on("click", function(event){
-    event.preventDefault();
-    console.log("cmon");
-    
-    $("#contact-modal").hide();
-    $("#name").val() = "";
-    $("#email").val() = "";
-    $("#message").val() = "";
- //   $("#contact-modal").empty();
-    
-  });
-  $('#close-review').on("click", function(event){
-    event.preventDefault();
-    console.log("cmon");
-    
-    $("#review-modal").hide();
-    $("#name").val() = "";
-    $("#rating").val() = "";
-    $("#review").val() = "";
- //   $("#contact-modal").empty();
-    
-  });
-  $('#review').on("click", function(event){
-    event.preventDefault();
-    console.log("cmon");
-    $("#contact-modal").hide();
-    $("#review-modal").show();
-  });
-   $('#send-contact').on("click", function(event){
-    event.preventDefault();
->>>>>>> sort
-    
-      $.post({
-      url: '/freelancer/messages/'+this.user_id,
-      data: {
-        name:  $("#name").val(),
-        email: $("#emaill").val(),
-        message: $("#message").val()
-      }
-    }).done(function(response){
-      if(response.status === 'success'){
-       // window.location.href = response.url;
-      } else{
+      $('#contact').on("click", function(event){
+        event.preventDefault();
+        console.log("cmon");
+        $("#review-modal").hide();
+        $("#contact-modal").show();
+      });
+
+      $('#close-contact').on("click", function(event){
+        event.preventDefault();
+        console.log("cmon");
         
-      }
-    });
-  });
-<<<<<<< HEAD
-});
+        $("#contact-modal").hide();
+        $("#name").val() = "";
+        $("#email").val() = "";
+        $("#message").val() = "";
+        // $("#contact-modal").empty();
+      });
+      $('#close-review').on("click", function(event){
+        event.preventDefault();
+        console.log("cmon");
+        
+        $("#review-modal").hide();
+        $("#name").val() = "";
+        $("#rating").val() = "";
+        $("#review").val() = "";
+    //   $("#contact-modal").empty();
+      });
 
- </script>
-=======
- </script>
->>>>>>> sort
+      $('#review').on("click", function(event){
+        event.preventDefault();
+        console.log("cmon");
+        $("#contact-modal").hide();
+        $("#review-modal").show();
+      });
+
+      $('#send-contact').on("click", function(event){
+        event.preventDefault();
+  
+      $.post({
+        url: '/freelancer/messages/'+this.user_id,
+        data: {
+          name:  $("#name").val(),
+          email: $("#emaill").val(),
+          message: $("#message").val()
+        }
+      }).done(function(response){
+        if(response.status === 'success'){
+          console.log("ok");
+        } else{}
+      });
+  });
+});
+</script>
