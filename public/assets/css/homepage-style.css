@@ -111,6 +111,11 @@ h3 {
 		background-color: white;
 		opacity: 1;
 }
+.card-img {
+	height: 300px;
+	object-fit: cover;
+
+}
 
 .error-msg {
     font-family: 'Encode Sans Expanded', sans-serif;
