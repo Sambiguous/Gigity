@@ -116,11 +116,12 @@
 
 	function dealCards(array, skills=false){
 		
-		var skill = skills ? array[i].descr : "";
+		
 		$("#cards").empty();
 
     
     	for(var i = (page * CARDS_PER_PAGE); (i < (CARDS_PER_PAGE * (page + 1)) && i < array.length); i++){
+			var skill = skills ? array[i].descr : "";
 
 			$('#cards').append(
 				"<div class='col s12 m4 l3'>" +
@@ -153,6 +154,7 @@
 				skill: $(this).data('skill')
 			}
 		}).done(function(result){
+			console.log(result);
 			dealCards(result, true);
 		})
 	})
