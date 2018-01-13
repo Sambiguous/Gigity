@@ -82,4 +82,5 @@ INSERT INTO freelancer_skills (user_id, skill_id) VALUES (19, 2);
 INSERT INTO jobs (employer_id, freelancer_id, job_descr, job_status) VALUES (2, 1, 'Create storefront for dark web sales', 4);
 INSERT INTO jobs (employer_id, job_descr) VALUES (2, 'Create email template');
 
-INSERT INTO reviews (job_id, reviewer_id, reviewee_id, rating, review) VALUES (1, 1, 2, 5, 'No direct contact, paid in bitcoin');
+INSERT INTO reviews (job_id, reviewer_id, reviewee_id, rating, review) VALUES (1, 1, 2, 3, 'No direct contact, paid in bitcoin');
+INSERT INTO reviews (job_id, reviewer_id, reviewee_id, rating, review) VALUES (2, 2, 1, 5, 'Excelent worker. Delivered what he promised on time and with no problems. I would hire him again.');

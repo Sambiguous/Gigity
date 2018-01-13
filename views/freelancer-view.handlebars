@@ -18,7 +18,6 @@
     <!-- container displays the freelancers profile information and existing reviews -->
     
 <div class="container profile-reviews">
-	{{this}}
 	 <div class="row">
 	    <div class="col s12 m7 offset-m2 l7 offset-l2 z-depth-6">
 	      <div class="card profile-card">
@@ -27,7 +26,7 @@
 	        </div>
 	        <div class="card-content">
 	        <span class="card-title"><h3>{{this.first_name}} {{this.last_name}}</h3></span>
-	        <span id="card-occupation"><p>{{#each this.skills}}{{this}}{{/each}} | 
+	        <span id="card-occupation"><p>{{#each this.skills}}{{this}}<br>{{/each}} | 
 	        <span id="card-rate">${{this.rate}} per hour</p></span>
 	        <p id="email">{{this.email}}</p>
 	        <br>
@@ -47,14 +46,16 @@
 	
 		<div class="col s12 m7 offset-m2 l7 offset-l2 z-depth-6">
 
-	{{#if this.hasreviews}}
-		 <div class="card review-card darken-1">
-	        <div class="card-content">
-	            <span id="employer">{{this.reviews.employer}} </span><span id="rating"> {{this.reviews.rating}}</span>
-	            <p id="review">{{this.reviews.review}}</p>
-	        </div>
-	      </div>
-	    </div>
+	{{#if this.hasReviews}}
+		{{#each this.reviews}}
+			<div class="card review-card darken-1">
+						<div class="card-content">
+								<span id="employer">{{this.employer}} </span><span id="rating"> {{this.rating}}</span>
+								<p id="review">{{this.review}}</p>
+						</div>
+					</div>
+				</div>
+		{{/each}}
 	{{/if}}
 	</div>
 </div>

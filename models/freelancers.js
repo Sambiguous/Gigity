@@ -33,6 +33,7 @@ var freelancers = {
     var data = {};
 
     orm.getFreelancerSkillsByID(user_id,function(result) {
+      
 
       var skills = [];
 
@@ -47,24 +48,25 @@ var freelancers = {
       data.rate = result[0].rate;
       data.photo = result[0].photo;
 
+      orm.findFreelancerReviewsByID(user_id, function(result) {
+
+        var reviews = []; 
+  
+        for(i = 0; i < result.length; i++) {
+          var tempObj = {};
+  
+          tempObj.employer = result[i].company;
+          tempObj.rating = result[i].rating;
+          tempObj.review = result[i].review;
+  
+          reviews.push(tempObj);
+        }
+        
+        data.reviews = reviews;
+        data.hasReviews = reviews.length > 0;
+        console.log(data);
+        callback(data);
       });
-
-    orm.findFreelancerReviewsByID(user_id, function(result) {
-
-      var reviews = []; 
-
-      for(i = 0; i < result.length; i++) {
-        var tempObj = {};
-
-        tempObj.employer = result[i].company;
-        tempObj.rating = result[i].rating;
-        tempObj.review = result[i].review;
-
-        reviews.push(tempObj);
-      }
-      
-      data.reviews = reviews;
-      callback(data);
     });
   }, 
 
