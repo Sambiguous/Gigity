@@ -10,6 +10,10 @@ var orm = require('../models/orm.js')
 router.use('/freelancers', require('./freelancerController'))
 router.use('/employers', require('./employerController'))
 
+router.ger('/favicon.ico', function(req, res){
+    res.end();
+})
+
 
 //HOMEPAGE ROUTE
 router.get("/", function(req, res) {
