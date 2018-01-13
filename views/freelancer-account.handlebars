@@ -135,36 +135,6 @@
 
 </div>
 
-<<<<<<< HEAD
-  <!-- scripts -->
-
-  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
-
-  <script src="../../public/assets/js/home.js"></script>
-  
-  <script type="text/javascript">
-
-     $(document).ready(function() {
-
-      $('select').material_select();
-      $('.parallax').parallax();
-      $(".button-collapse").sideNav();
-      $('.dropdown-button').dropdown('open');
-      $('.dropdown-button').dropdown('close');
-
-      $('.modal').modal({
-        dismissible: true, // Modal can be dismissed by clicking outside of the modal
-        opacity: .5, // Opacity of modal background
-        inDuration: 300, // Transition in duration
-        outDuration: 200, // Transition out duration
-        startingTop: '4%', // Starting top style attribute
-        endingTop: '10%', // Ending top style attribute
-      });
-
-      $('#send-contact').on("click", function(event){
-        event.preventDefault();
-=======
 	<!-- scripts -->
 
  	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
@@ -208,7 +178,6 @@
   });
    $('#send-contact').on("click", function(event){
     event.preventDefault();
->>>>>>> sort
     
       $.post({
       url: '/freelancer/messages/'+this.user_id,
@@ -225,10 +194,5 @@
       }
     });
   });
-<<<<<<< HEAD
 });
-
  </script>
-=======
- </script>
->>>>>>> sort
