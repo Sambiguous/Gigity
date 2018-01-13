@@ -40,8 +40,6 @@ router.post("/", function(req, res){
     });
 });
 
-
-
 router.get("/freelancer/:id", function(req, res){
     var id = req.params.id
     freelancers.getData(id,function(data){

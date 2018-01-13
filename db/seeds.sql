@@ -89,3 +89,4 @@ INSERT INTO jobs (employer_id, job_descr) VALUES (2, 'Create email template');
 
 INSERT INTO reviews (job_id, reviewer_id, reviewee_id, rating, review) VALUES (1, 1, 2, 3, 'No direct contact, paid in bitcoin');
 INSERT INTO reviews (job_id, reviewer_id, reviewee_id, rating, review) VALUES (2, 2, 1, 5, 'Excelent worker. Delivered what he promised on time and with no problems. I would hire him again.');
+INSERT INTO reviews (job_id, reviewer_id, reviewee_id, rating, review) VALUES (3, 4, 1, 3, 'This guy never took his mask off, gave me the creeps. good work though.');

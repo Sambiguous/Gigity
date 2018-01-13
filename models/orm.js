@@ -139,7 +139,7 @@ var orm = {
   },
 
   addJob: function(freelancerId, email, message,callback) {
-    var queryString = "INSERT INTO jobs (freelancer_id,employer_email,job_descr) VALUES (?) ";
+    var queryString = "INSERT INTO jobs (freelancer_id,employer_email,job_descr) VALUES (?, ?, ?)";
  
     connection.query(queryString, [freelancerId, email, message], function(err, result) {
       if (err) {
