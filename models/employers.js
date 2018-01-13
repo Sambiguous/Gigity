@@ -42,8 +42,10 @@ var employers = {
     });
   },
   jobRequest: function(requestData,callback) {
+    
     var message = requestData.message;
     var userId = requestData.id;
+    console.log(message);
     var email = requestData.email;
     orm.addJob(userId,email,message,function(res) {
       callback(res);
