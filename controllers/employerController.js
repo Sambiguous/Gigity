@@ -35,7 +35,6 @@ router.get("/", function(req, res) {
 
 router.post("/", function(req, res){
     employers.selectBySkill(req.body.skill, function(result){
-        console.log("select by skill return:", result);
         res.send(result);
     });
 });
@@ -48,7 +47,6 @@ router.get("/freelancer/:id", function(req, res){
                 status: "Internal Database Error"
             });
         }else{
-            console.log("employer controller line 45:", data);
           res.render("../views/freelancer-account.handlebars", data);
         };
     });
@@ -64,7 +62,6 @@ router.post("/messages", function(req, res){
                     status: "Internal Database Error"
                 });
             }else{
-                console.log(data);
             res.redirect('/');
             };
         });

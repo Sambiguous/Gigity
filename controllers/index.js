@@ -36,7 +36,6 @@ router.get('/logout', function(req, res){
 
 //LOGIN ROUTE
 router.post("/login", function(req, res){
-    console.log("req.body", req.body)
 
     orm.select('users', {user_email: req.body.email}, function(result){
         if(result[0]){
